@@ -96,6 +96,7 @@ body.animacaoAtivaAnimacao {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform-origin: 50% 51.57%;
   transform: translate(-50%, -50%) scale(0);
   z-index: 8;
   width: 10px;
@@ -103,11 +104,16 @@ body.animacaoAtivaAnimacao {
   opacity: 0;
   animation: expandirLogoAnimacao 5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
+@media (min-width: 900px) {
+  .logoExpandAnimacao {
+    transform-origin: 50% 51.5%; /* ajuste o valor até centralizar no desktop */
+  }
+}
 
 @keyframes expandirLogoAnimacao {
   0% { transform: translate(-50%, -50%) scale(0.02) rotate(0deg); opacity: 0; }
   50% { opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(2485) rotate(2820deg); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(185) rotate(900deg); opacity: 0; }
 }
 
 /* FADE OUT */

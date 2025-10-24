@@ -212,55 +212,189 @@
       transform: rotate(-47deg) translate(6px, -6px);
     }
 
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
 
-      .menu {
-        display: flex;
-        flex-direction: column;
-        background: #333;
-        position: fixed;
-        top: 60px;
-        right: -220px;
-        /* começa escondido */
-        width: 200px;
-        padding: 20px;
-        border-radius: 0 0 0 10px;
-        z-index: 1000;
-        box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.3);
-        opacity: 0;
-        transition: right 0.5s ease, opacity 0.5s ease;
-      }
 
-      .menu.active {
-        right: 0;
-        /* desliza para a posição */
-        opacity: 1;
-      }
 
-      .menu a {
-        margin: 8px 0;
-        /* links mais próximos */
-        font-size: 18px;
-        /* fonte maior */
-        transition: color 0.3s, transform 0.3s ease;
-      }
 
-      .menu a:hover {
-        color: var(--primary);
-        transform: translateX(5px);
-        /* leve deslocamento */
-      }
 
-      .hamburger {
-        display: flex;
-      }
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-title {
+  display: none;
+}
+
+.theme-switch {
+    display: none;
+  }
+
+ .menu-links {
+    display: flex;
+    flex-direction: row;
+    gap: 122px;
+    width: 100%;
+  }
+
+
+
+
+@media (max-width: 768px) {
+  .hamburger{display: flex;}
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2e2e2e;
+    position: fixed;
+    top: 60px;
+    right: -250px;
+    width: 230px;
+    padding: 25px 20px;
+    border-radius: 0 0 0 16px;
+    z-index: 1000;
+    box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: right 0.5s ease, opacity 0.5s ease, background 0.3s;
+  }
+
+  .menu.active {
+    right: 0;
+    opacity: 1;
+  }
+
+  /* ---------- Título ---------- */
+  .menu-title {
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 85px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* ---------- Links ---------- */
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: -60px;
+  }
+
+  .menu-links a {
+    text-decoration: none;
+    color: #f1f1f1;
+    background: #444;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .menu-links a:hover {
+    transform: translateX(8px);
+    background: #ff6f61;
+  }
+
+  /* ---------- Switch de Tema ---------- */
+  .theme-switch {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #444;
+    width: 70px;
+    height: 34px;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 0 6px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+    transition: background 0.4s ease;
+  }
+
+  .switch .sun,
+  .switch .moon {
+    font-size: 18px;
+    z-index: 2;
+    user-select: none;
+  }
+
+  .switch .slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s ease, background 0.3s;
+  }
+
+  /* Estado ativo (modo escuro) */
+  #darkModeToggle:checked + .switch {
+    background: #ff6f61;
+  }
+
+  #darkModeToggle:checked + .switch .slider {
+    transform: translateX(48px);
+    background: #222;
+  }
+
+  #darkModeToggle {
+    display: none;
+  }
+
+  /* ---------- Dark mode geral ---------- */
+  body.dark .menu {
+    background: #1b1b1b;
+  }
+
+  body.dark .menu-links a {
+    background: #333;
+  }
+
+  body.dark .menu-links a:hover {
+    background: #ffb703;
+  }
+}
+
+
+
+
+
+
 
 
 
@@ -344,16 +478,34 @@
     }
 
     .carousel-controls button {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.552);
       border: none;
       color: white;
+      border: 1px solid black;
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
       pointer-events: auto;
+      font-size: 1.5em;
       /* mantém os botões clicáveis */
     }
+   /* Hover no desktop */
+.carousel-controls button:hover {
+  background: var(--primary);
+}
+
+/* "Active" no toque mobile (quando o dedo está pressionando) */
+@media (hover: none) and (pointer: coarse) {
+  .carousel-controls button:hover {
+    background: rgba(0, 0, 0, 0.552); /* desativa hover preso */
+  }
+
+  .carousel-controls button:active {
+    background: var(--primary);
+    transform: scale(0.95);
+  }
+}
 
     .info {
       margin-top: 10px;
@@ -576,6 +728,351 @@
   filter: blur(2px);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== SEÇÃO SOBRE AS MANDALAS ===== */
+/* ===== NOVO DESIGN SOBRE AS MANDALAS ===== */
+.sobre-mandalas-nova {
+  width: 100%;
+  position: relative;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 120px 20px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  overflow: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.sobre-mandalas-nova h2, 
+.sobre-mandalas-nova h3 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.sobre-mandalas-nova p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Container geral */
+.container-mandala {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Introdução */
+.intro-mandala {
+  text-align: center;
+  max-width: 800px;
+  padding: 1em;
+  margin: 1 auto;
+}
+
+.intro-mandala h2 {
+  color: var(--primary);
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+/* Bloco de material */
+.material-mandala {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.material-mandala .texto {
+  flex: 1;
+}
+
+.material-mandala .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.material-mandala img {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.6s ease;
+}
+
+.material-mandala img:hover {
+  transform: scale(1.05);
+}
+
+/* Tipos de mandalas */
+.tipos-mandala {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tipos-mandala .tipo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.tipos-mandala .tipo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.tipos-mandala .imagem img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.tipos-mandala .imagem img:hover {
+  transform: scale(1.08);
+}
+
+/* Envio */
+.envio-mandala {
+  background: var(--primary);
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.envio-mandala h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* ===== IMAGEM ANIMADA DE FUNDO (MANDALA) ===== */
+.imagem-mandala {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.imagem-mandala img {
+  height: 100%;
+  width: auto;
+  opacity: 0.6;
+  transform: translateX(50%) translateY(30%);
+  transition: transform 0.6s ease-out;
+  will-change: transform;
+}
+
+/* Versão mobile — mandala maior e mais translúcida */
+@media (max-width: 900px) {
+  .material-mandala, .tipos-mandala .tipo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .material-mandala img,
+  .tipos-mandala .imagem img {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .envio-mandala {
+    padding: 40px 20px;
+  }
+
+  .intro-mandala h2 {
+    font-size: 2rem;
+  }
+
+  .imagem-mandala img {
+    width: 420%;
+    height: auto;
+    opacity: 0.35;
+    transform: translateX(50%);
+  }
+}
+
+/* ====== MODO ESCURO ====== */
+body.dark .sobre-mandalas-nova {
+  background: #0e0e0e;
+  color: #f1f1f1;
+}
+
+body.dark .sobre-mandalas-nova p {
+  color: #ddd;
+}
+
+body.dark .material-mandala img,
+body.dark .tipos-mandala .imagem img {
+  box-shadow: 0 10px 30px rgba(255,255,255,0.08);
+}
+
+body.dark .envio-mandala {
+  background: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(255,255,255,0.05);
+}
+
+body.dark .intro-mandala h2 {
+  color: #f92f8a;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MANDALAS - DESIGN LIMPO E PROFISSIONAL ===== */
+.sobre-mandalas-nova {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 100px 20px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.sobre-mandalas-nova h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.sobre-mandalas-nova p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 700px;
+}
+
+/* Container */
+.container-mandala {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* Blocos */
+.material-mandala.clean,
+.tipos-mandala.clean .tipo {
+  background: var(--card-bg);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-mandala.clean:hover,
+.tipos-mandala.clean .tipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Ícones / Emojis destacados */
+.tipos-mandala h3::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Layout dos tipos */
+.tipos-mandala.clean {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sobre-mandalas-nova {
+    padding: 60px 15px;
+  }
+
+  .sobre-mandalas-nova h3 {
+    font-size: 1.5rem;
+  }
+
+  .material-mandala.clean,
+  .tipos-mandala.clean .tipo {
+    padding: 25px;
+  }
+}
+
+/* Modo escuro */
+body.dark .material-mandala.clean,
+body.dark .tipos-mandala.clean .tipo {
+  background: #1b1b1b;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== TRANSPARÊNCIA SUAVE NOS CARDS DAS MANDALAS ===== */
+.material-mandala.clean,
+.tipos-mandala.clean .tipo,
+.envio-mandala {
+  background: rgba(235, 235, 235, 0.75); /* Fundo branco translúcido */
+  backdrop-filter: blur(8px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Modo escuro */
+body.dark .material-mandala.clean,
+body.dark .tipos-mandala.clean .tipo,
+body.dark .envio-mandala {
+  background: rgba(20, 20, 20, 0.65); /* fundo escuro translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
   </style>
 </head>
 
@@ -637,21 +1134,105 @@
         <span></span>
       </div>
       <div class="menu" id="menu">
-        <a href="#mandalas30">Mandalas 30cm</a>
-        <a href="#mandalas15">Mandalas 15cm</a>
-        <a href="#mandalas11">Mandalas 11cm</a>
-        <!-- <a href="#porta-copos">Porta copos</a> -->
+        <h2 class="menu-title">Escolha o tamanho ideal da sua mandala:</h2>
 
-
-
+        <nav class="menu-links">
+          <a href="#mandalas30">Mandalas 30cm</a>
+          <a href="#mandalas15">Mandalas 15cm</a>
+          <a href="#mandalas11">Mandalas 11cm</a>
+        </nav>
+      
+        <div class="theme-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <label for="darkModeToggle" class="switch">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+            <div class="slider"></div>
+          </label>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Espaço para banners promocionais -->
-  <div id="bannerPromocional" style="display: none; height: 120px; width: 100%; padding-top: 80px;">
-    <h1></h1>
+
+<!-- ===== SEÇÃO DE APRESENTAÇÃO DAS MANDALAS ===== -->
+<section class="sobre-mandalas-nova" id="sobreMandalas">
+
+  <div class="imagem-mandala">
+    <img src="ico/Design sem nome (1).png" alt="Mandala decorativa Mandaura">
   </div>
+
+  <div class="container-mandala">
+
+    <div class="intro-mandala">
+      <h2>Mandalas que elevam sua Aura ✨</h2>
+      <p>
+        Criadas com precisão e propósito, nossas mandalas unem
+        <strong>arte, energia e equilíbrio</strong>.
+        <br> Cada peça é feita com intenção, para transformar qualquer ambiente em um espaço <br>de <strong>harmonia,
+        beleza e boas vibrações</strong>.
+      </p>
+      
+   
+
+    </div>
+
+    <div class="material-mandala clean">
+      <div class="texto">
+        <h3>QUALIDADE QUE DURA</h3>
+        <p>
+          Fabricadas em <strong>aço inoxidável</strong>, nossas mandalas
+          não desbotam e não enferrujam — mantendo seu brilho e presença por muitos anos.
+        </p>
+      </div>
+    </div>
+
+    <div class="tipos-mandala clean">
+      
+      <div class="tipo">
+        <div class="texto">
+          <h3>🌈 Mandalas Coloridas</h3>
+          <p>
+            Acompanha uma <em>espiral metálica</em> com <em>esfera em vidro</em> que reflete a luz natural e cria um espetáculo de cores vibrantes.
+          </p>
+        </div>
+      </div>
+
+      <div class="tipo">
+        <div class="texto">
+          <h3>🕉️ Mandalas Prateadas</h3>
+          <p>
+            Inclui um <em>pêndulo</em> com as <em>esferas dos 7 chakras em vidro</em>, símbolo de energia e equilíbrio espiritual.
+          </p>
+        </div>
+      </div>
+
+      <div class="tipo">
+        <div class="texto">
+          <h3>✨ Mandalas Furta-Cor</h3>
+          <p>
+            Inclui um <em>pêndulo em formato de gota</em> com <em>esfera em vidro</em> que capturam a luz natural, criando reflexos suaves e elegantes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="envio-mandala">
+      <h3>📦 ENVIAMOS PARA TODO O BRASIL</h3>
+      <p>
+        Atendimento rápido e seguro — embalamos cada mandala com cuidado e atenção em cada detalhe.
+        Enviamos para todas as regiões do Brasil com rastreamento e garantia de entrega.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Espaço para banners promocionais -->
+  <!-- <div id="bannerPromocional" style="display: none; height: 120px; width: 100%; padding-top: 80px;">
+    <h1><img src="" alt=""></h1>
+  </div> -->
 
   <!-- Catálogo -->
   <div class="catalogo" id="catalogo"></div>
@@ -738,14 +1319,50 @@
   </div>
 
   <script>
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    const footer = document.querySelector('footer');
 
-    // Rola suavemente pro topo ao clicar
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 
+
+
+const mandala = document.querySelector('.imagem-mandala img');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const isMobile = window.innerWidth < 900;
+
+  // controla o deslocamento lateral
+  // ⬇️ reduzido de 0.125 para 0.07 → sai mais devagar
+  const moveFactor = isMobile ? 0.045 : 0.07;
+  // ⬇️ limite reduzido de 200 para 150 → desloca menos
+  const move = 50 + Math.min(scrollY * moveFactor, 150);
+
+  // controla o giro proporcional à saída
+  const maxMove = 400;
+  const progress = Math.min(scrollY * moveFactor, maxMove) / maxMove;
+  // ⬇️ reduzido de 320 para 180 → gira mais devagar
+  const rotation = progress * 180;
+
+  mandala.style.transform = `translateX(${move}%) rotate(${rotation}deg)`;
+});
+
+
+// Garante que sempre inicie no topo
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+// E força o topo na primeira visita
+window.addEventListener("load", () => {
+  const jaVisitou = localStorage.getItem("visitouMandaura");
+  if (!jaVisitou) {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, 50); // pequeno delay pra garantir o layout pronto
+    localStorage.setItem("visitouMandaura", "true");
+  } else {
+    // se quiser garantir mesmo em recarregamentos, pode manter:
+    window.scrollTo(0, 0);
+  }
+});
     // Mostra o botão só quando o footer estiver visível
     window.addEventListener('scroll', () => {
       const footerRect = footer.getBoundingClientRect();
@@ -786,65 +1403,94 @@
 
 
 
+const logo = document.querySelector(".logo");
+const body = document.body;
+const toggleSwitch = document.getElementById("darkModeToggle"); // switch de tema
+
+// Carrega tema salvo
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  if (toggleSwitch) toggleSwitch.checked = true; // garante que o switch reflita o estado salvo
+}
+
+// Função principal para alternar o tema
+function toggleTheme() {
+  // animação de aumento no logo
+  logo.classList.add("active");
+  setTimeout(() => logo.classList.remove("active"), 300);
+
+  // alterna o modo escuro
+  body.classList.toggle("dark");
+
+  // salva no localStorage
+  const isDark = body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+
+  // atualiza o switch visualmente
+  if (toggleSwitch) toggleSwitch.checked = isDark;
+
+  // mostra o toast
+  showToast(isDark ? "🌙 Modo escuro ativado!" : "☀️ Modo claro ativado!");
+}
+
+// evento de duplo clique no logo
+logo.addEventListener("dblclick", toggleTheme);
+
+// evento de mudança no switch
+if (toggleSwitch) {
+  toggleSwitch.addEventListener("change", toggleTheme);
+}
+
+// função de toast
+function showToast(msg) {
+  const toast = document.createElement("div");
+  toast.textContent = msg;
+  Object.assign(toast.style, {
+    position: "fixed",
+    bottom: "20px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    background: "rgba(0,0,0,0.8)",
+    color: "#fff",
+    padding: "10px 20px",
+    borderRadius: "8px",
+    fontSize: "0.9rem",
+    opacity: "0",
+    transition: "opacity 0.4s",
+    zIndex: "9999"
+  });
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => (toast.style.opacity = "1"));
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    setTimeout(() => toast.remove(), 500);
+  }, 2000);
+}
 
 
 
-    const logo = document.querySelector(".logo");
-    const body = document.body;
 
-    // carrega tema salvo
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark");
-    }
 
-    // evento de duplo clique
-    logo.addEventListener("dblclick", () => {
-      // animação de aumento
-      logo.classList.add("active");
-      setTimeout(() => logo.classList.remove("active"), 300);
 
-      // alterna o modo escuro
-      body.classList.toggle("dark");
 
-      // salva no localStorage
-      const isDark = body.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+
+
+
+
+
+
+
+
+
+
+    window.addEventListener("load", () => {
+      const jaVisitou = localStorage.getItem("visitouMandaura");
+
+      if (!jaVisitou) {
+        window.scrollTo({ top: 0, behavior: "instant" }); // sobe sem animação
+        localStorage.setItem("visitouMandaura", "true");
+      }
     });
-
-
-
-
-
-    function showToast(msg) {
-      const toast = document.createElement("div");
-      toast.textContent = msg;
-      Object.assign(toast.style, {
-        position: "fixed",
-        bottom: "20px",
-        left: "50%",
-        transform: "translateX(-50%)",
-        background: "rgba(0,0,0,0.8)",
-        color: "#fff",
-        padding: "10px 20px",
-        borderRadius: "8px",
-        fontSize: "0.9rem",
-        opacity: "0",
-        transition: "opacity 0.4s",
-        zIndex: "9999"
-      });
-      document.body.appendChild(toast);
-      requestAnimationFrame(() => toast.style.opacity = "1");
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        setTimeout(() => toast.remove(), 500);
-      }, 2000);
-    }
-
-    logo.addEventListener("dblclick", () => {
-      // ... dark mode logic ...
-      showToast(body.classList.contains("dark") ? "🌙 Modo escuro ativado!" : "☀️ Modo claro ativado!");
-    });
-
 
   </script>
 

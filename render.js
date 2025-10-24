@@ -47,29 +47,66 @@ function iniciarSite(produtos) {
   let lastScroll = 0;
   let idsCriados = {};
 
-  // ---------------- Menu hamburguer ----------------
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    menu.classList.toggle("active");
-  });
 
-  document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-    }
-  });
 
-  // ---------------- Esconde navbar no scroll ----------------
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > lastScroll && currentScroll > 50) {
-      navbar.classList.add("hidden");
-    } else {
-      navbar.classList.remove("hidden");
-    }
-    lastScroll = currentScroll;
-  });
+
+
+
+
+
+
+
+
+// ---------------- Menu hamburguer ----------------
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+});
+
+// ---------------- Esconde navbar no scroll ----------------
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  // 👉 Fecha o menu se estiver aberto ao rolar a tela
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+
+  // 👉 Esconde ou mostra a navbar conforme o scroll
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    navbar.classList.add("hidden");
+  } else {
+    navbar.classList.remove("hidden");
+  }
+
+  lastScroll = currentScroll;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   produtos.forEach((produto, i) => {
     // Gera um ID único se não existir
@@ -88,84 +125,281 @@ function iniciarSite(produtos) {
       idsCriados[produto.tamanho] = true;
     }
 
-    // ---- Carrossel do card ----
-    const carousel = document.createElement("div");
-    carousel.classList.add("carousel");
 
-        produto.imagens.forEach((src, i) => {
-      const img = document.createElement("img");
-      img.src = "img/loading.jpg"; // imagem padrão visível primeiro
-      img.dataset.src = src;
-      img.classList.add("carousel-item", "lazy-media");
-      if (i === 0) img.classList.add("active");
-      carousel.appendChild(img);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     // ---- Carrossel do card ----
+// const carousel = document.createElement("div");
+// carousel.classList.add("carousel");
+
+// // alterna entre vídeo e imagem como primeiro item
+// const mostrarVideoPrimeiro = i % 2 === 0; // alterna automaticamente: 0,2,4... vídeo / 1,3,5... imagem
+
+// // Função para adicionar imagens
+// const adicionarImagens = () => {
+//   produto.imagens.forEach((src, index) => {
+//     const img = document.createElement("img");
+//     img.src = "img/loading.jpg"; // imagem padrão
+//     img.dataset.src = src;
+//     img.classList.add("carousel-item", "lazy-media");
+//     if (!mostrarVideoPrimeiro && index === 0) img.classList.add("active"); // ativa imagem se for o caso
+//     carousel.appendChild(img);
+//   });
+// };
+
+// // Função para adicionar vídeo
+// const adicionarVideo = () => {
+//   if (produto.video) {
+//     const video = document.createElement("video");
+//     video.dataset.src = produto.video;
+//     video.classList.add("carousel-item", "lazy-media");
+//     video.preload = "none";      // não baixa antes de aparecer
+//     video.muted = true;          // autoplay permitido
+//     video.loop = true;           // repete
+//     video.playsInline = true;    // mobile
+//     video.volume = 0;            // silenciado
+//     if (mostrarVideoPrimeiro) video.classList.add("active");
+//     carousel.appendChild(video);
+//   }
+// };
+
+// // alterna a ordem conforme o índice
+// if (mostrarVideoPrimeiro) {
+//   adicionarVideo();
+//   adicionarImagens();
+// } else {
+//   adicionarImagens();
+//   adicionarVideo();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     // ---------- Lazy Load + Controle de Reprodução (1 vídeo por vez) ----------
+//     const lazyMedia = carousel.querySelectorAll(".lazy-media");
+
+//     const mediaObserver = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//         const el = entry.target;
+//         const isVideo = el.tagName === "VIDEO";
+//         const src = el.dataset.src;
+
+//         if (entry.isIntersecting) {
+//           // Só carrega quando entra na tela
+//           if (el.classList.contains("lazy-media")) {
+
+//             if (el.tagName === "IMG") {
+//               // Mostra imagem padrão até carregar a real
+//               const placeholder = el.src || "img/loading.jpg";
+//               el.src = placeholder;
+
+//               const realImg = new Image();
+//               realImg.src = src;
+//               realImg.onload = () => {
+//                 el.src = src;
+//                 el.classList.remove("lazy-media");
+//               };
+//             }
+
+//             else if (isVideo) {
+//               el.src = src;
+//               el.preload = "metadata";
+//               el.loop = true;
+//               el.classList.remove("lazy-media");
+//             }
+//           }
+
+//           // Controle: toca apenas um vídeo por vez
+//           if (isVideo) {
+//             document.querySelectorAll("video.carousel-item").forEach(v => {
+//               if (v !== el && !v.paused) v.pause();
+//             });
+//             el.play().catch(() => {});
+//           }
+
+//         } else {
+//           if (isVideo && !el.paused) el.pause();
+//         }
+//       });
+//     }, { rootMargin: "1000px", threshold: 0.1 });
+
+//     lazyMedia.forEach(el => mediaObserver.observe(el));
+
+
+
+
+
+// ---- Carrossel do card ----
+const carousel = document.createElement("div");
+carousel.classList.add("carousel");
+
+// ✅ Só o primeiro card (i === 0) começa com vídeo
+const mostrarVideoPrimeiro = !!produto.video && i === 0;
+
+// Função para adicionar imagens
+const adicionarImagens = () => {
+  produto.imagens.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = "img/loading.jpg"; // placeholder inicial
+    img.dataset.src = src;
+    img.classList.add("carousel-item", "lazy-media");
+    if (!mostrarVideoPrimeiro && index === 0) img.classList.add("active");
+    carousel.appendChild(img);
+  });
+};
+
+// Função para adicionar vídeo
+const adicionarVideo = () => {
+  if (!produto.video) return;
+
+  const video = document.createElement("video");
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.autoplay = true;
+  video.setAttribute("playsinline", "");
+  video.setAttribute("muted", "");
+  video.style.width = "100%";
+  video.style.borderRadius = "10px";
+
+  if (mostrarVideoPrimeiro) {
+    // 🔥 primeiro card com vídeo ativo
+    video.src = produto.video;
+    video.classList.add("carousel-item", "active");
+    video.preload = "auto";
+
+    // garante tentativa de autoplay assim que o DOM estiver pronto
+    const tentarPlay = () => {
+      const promise = video.play();
+      if (promise !== undefined) {
+        promise.catch(() => {
+          // adiciona listener para liberar autoplay assim que o usuário tocar
+          const liberar = () => {
+            video.play().catch(() => {});
+            document.removeEventListener("click", liberar);
+            document.removeEventListener("touchstart", liberar);
+            document.removeEventListener("scroll", liberar);
+          };
+          document.addEventListener("click", liberar);
+          document.addEventListener("touchstart", liberar);
+          document.addEventListener("scroll", liberar);
+        });
+      }
+    };
+
+    // chama a primeira tentativa logo após renderizar
+    requestAnimationFrame(() => {
+      video.addEventListener("canplay", tentarPlay, { once: true });
+
+      // reforça a tentativa após um pequeno delay
+      setTimeout(() => tentarPlay(), 1500);
     });
 
+  } else {
+    // demais cards continuam lazy
+    video.dataset.src = produto.video;
+    video.preload = "none";
+    video.classList.add("carousel-item", "lazy-media");
+  }
+
+  carousel.appendChild(video);
+};
 
 
-    if (produto.video) {
-      const video = document.createElement("video");
-      video.dataset.src = produto.video;
-      video.classList.add("carousel-item", "lazy-media");
-      // Lazy load + performance
-      video.preload = "none";      // não baixa antes de aparecer
-      video.muted = true;          // autoplay permitido
-      video.loop = true;            // repete
-      video.playsInline = true;    // mobile
-      video.volume = 0;             // silenciado
 
-      carousel.appendChild(video);
-    }
+// alterna ordem: primeiro card = vídeo primeiro / outros = imagem primeiro
+if (mostrarVideoPrimeiro) {
+  adicionarVideo();
+  adicionarImagens();
+} else {
+  adicionarImagens();
+  adicionarVideo();
+}
 
-    // ---------- Lazy Load + Controle de Reprodução (1 vídeo por vez) ----------
-    const lazyMedia = carousel.querySelectorAll(".lazy-media");
 
-    const mediaObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const el = entry.target;
-        const isVideo = el.tagName === "VIDEO";
-        const src = el.dataset.src;
 
-        if (entry.isIntersecting) {
-          // Só carrega quando entra na tela
-          if (el.classList.contains("lazy-media")) {
+// ---------- Lazy Load + Controle de Reprodução (1 vídeo por vez) ----------
+const lazyMedia = carousel.querySelectorAll(".lazy-media");
 
-            if (el.tagName === "IMG") {
-              // Mostra imagem padrão até carregar a real
-              const placeholder = el.src || "img/loading.jpg";
-              el.src = placeholder;
+const mediaObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const el = entry.target;
+    const isVideo = el.tagName === "VIDEO";
+    const src = el.dataset.src;
 
-              const realImg = new Image();
-              realImg.src = src;
-              realImg.onload = () => {
-                el.src = src;
-                el.classList.remove("lazy-media");
-              };
-            }
-
-            else if (isVideo) {
-              el.src = src;
-              el.preload = "metadata";
-              el.loop = true;
-              el.classList.remove("lazy-media");
-            }
-          }
-
-          // Controle: toca apenas um vídeo por vez
-          if (isVideo) {
-            document.querySelectorAll("video.carousel-item").forEach(v => {
-              if (v !== el && !v.paused) v.pause();
-            });
-            el.play().catch(() => {});
-          }
-
-        } else {
-          if (isVideo && !el.paused) el.pause();
+    if (entry.isIntersecting) {
+      if (el.classList.contains("lazy-media")) {
+        if (el.tagName === "IMG") {
+          const realImg = new Image();
+          realImg.src = src;
+          realImg.onload = () => {
+            el.src = src;
+            el.classList.remove("lazy-media");
+          };
+        } else if (isVideo) {
+          el.src = src;
+          el.preload = "metadata";
+          el.classList.remove("lazy-media");
+          el.addEventListener("canplay", () => el.play().catch(() => {}), { once: true });
         }
-      });
-    }, { rootMargin: "200px", threshold: 0.2 });
+      }
 
-    lazyMedia.forEach(el => mediaObserver.observe(el));
+      // Controle: apenas um vídeo rodando
+      if (isVideo) {
+        document.querySelectorAll("video.carousel-item").forEach(v => {
+          if (v !== el && !v.paused) v.pause();
+        });
+        el.play().catch(() => {});
+      }
+    } else {
+      if (isVideo && !el.paused) el.pause();
+    }
+  });
+}, { rootMargin: "1000px", threshold: 0.1 });
+
+lazyMedia.forEach(el => mediaObserver.observe(el));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -258,33 +492,7 @@ card.appendChild(checkboxLabel);
 
 
 
-    // const checkboxLabel = document.createElement("label");
-    // checkboxLabel.classList.add("checkbox-container");
-    // checkboxLabel.innerHTML = `
-    //     <input type="checkbox" class="select-produto">
-    //     <span class="checkmark"></span>
-    //     Selecionar
-    //   `;
-
-    // const checkbox = checkboxLabel.querySelector("input");
-    // checkbox.addEventListener("change", () => {
-    //   card.classList.toggle("selected", checkbox.checked);
-
-    //   if (checkbox.checked) {
-    //     if (!carrinho.some(p => p.id === produto.id)) {
-    //       carrinho.push(produto);
-    //     }
-    //   } else {
-    //     carrinho = carrinho.filter(p => p.id !== produto.id);
-    //   }
-
-    //   btnCarrinho.style.display = carrinho.length > 0 ? "block" : "none";
-    // });
-
-    // card.addEventListener("dblclick", () => {
-    //   checkbox.checked = !checkbox.checked;
-    //   checkbox.dispatchEvent(new Event("change"));
-    // });
+    
 
     // ---- Adiciona elementos no card ----
     card.appendChild(carousel);
@@ -293,91 +501,189 @@ card.appendChild(checkboxLabel);
     catalogo.appendChild(card);
 
     // ---- Modal do card (imagem/video) ----
-    const modal = document.createElement("div");
-    modal.id = "modaldeimgdocard";
-    modal.style.cssText = `
-        position: fixed; top:0; left:0; width:100%; height:100%;
-        background: rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center;
-        z-index:2000; flex-direction:column;
-      `;
-    const modalContent = document.createElement("div");
-    modalContent.style.cssText = "position:relative; max-width:90%; max-height:90%; display:flex; align-items:center; justify-content:center;";
-    const closeBtn = document.createElement("span");
-    closeBtn.innerHTML = "✕";
-    closeBtn.style.cssText = "position:absolute; top:10px; right:15px; font-size:30px; color:white; cursor:pointer; z-index:2100;";
-    modalContent.appendChild(closeBtn);
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
 
-    items.forEach((item, i) => {
-      item.addEventListener("click", () => {
-        modal.style.display = "flex";
-        modalContent.querySelectorAll("img, video").forEach(el => el.remove());
-        modalIndex = i;
-        const clone = item.cloneNode(true);
-        if (clone.tagName === "VIDEO") clone.muted = true; clone.autoplay = true; clone.volume = 0;
-        modalContent.appendChild(clone);
-      });
+
+
+
+
+
+
+
+
+  // ---- Modal do card (imagem/video) ----
+  // ===== MODAL DE IMAGEM / VÍDEO =====
+const modalNavegacaoDoModalDoCard = document.createElement("div");
+modalNavegacaoDoModalDoCard.id = "modaldeimgdocard";
+modalNavegacaoDoModalDoCard.style.cssText = `
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2000;
+  overflow: hidden;
+`;
+
+const modalContentNavegacaoDoModalDoCard = document.createElement("div");
+modalContentNavegacaoDoModalDoCard.style.cssText = `
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const closeBtnNavegacaoDoModalDoCard = document.createElement("span");
+closeBtnNavegacaoDoModalDoCard.innerHTML = "✕";
+closeBtnNavegacaoDoModalDoCard.style.cssText = `
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+`;
+
+const navContainerNavegacaoDoModalDoCard = document.createElement("div");
+navContainerNavegacaoDoModalDoCard.style.cssText = `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+`;
+
+function criarBotaoNavegacao(texto) {
+  const btn = document.createElement("button");
+  btn.innerHTML = texto;
+  btn.style.cssText = `
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  `;
+  btn.onmouseenter = () => (btn.style.background = "rgba(255,255,255,0.4)");
+  btn.onmouseleave = () => (btn.style.background = "rgba(255,255,255,0.2)");
+  return btn;
+}
+
+const prevBtnNavegacaoDoModalDoCard = criarBotaoNavegacao("◀");
+const nextBtnNavegacaoDoModalDoCard = criarBotaoNavegacao("▶");
+
+const counterNavegacaoDoModalDoCard = document.createElement("span");
+counterNavegacaoDoModalDoCard.style.cssText = "color:white; font-size:16px;";
+
+navContainerNavegacaoDoModalDoCard.append(
+  prevBtnNavegacaoDoModalDoCard,
+  counterNavegacaoDoModalDoCard,
+  nextBtnNavegacaoDoModalDoCard
+);
+
+modalContentNavegacaoDoModalDoCard.append(closeBtnNavegacaoDoModalDoCard);
+modalNavegacaoDoModalDoCard.append(
+  modalContentNavegacaoDoModalDoCard,
+  navContainerNavegacaoDoModalDoCard
+);
+document.body.appendChild(modalNavegacaoDoModalDoCard);
+
+let modalIndexNavegacaoDoModalDoCard = 0;
+let modalItemsNavegacaoDoModalDoCard = [];
+
+// ---- Exibir item atual ----
+function showModalItemNavegacaoDoModalDoCard(index) {
+  modalContentNavegacaoDoModalDoCard
+    .querySelectorAll("img, video")
+    .forEach(el => {
+      if (el.tagName === "VIDEO") el.pause();
+      el.remove();
     });
 
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-      modalContent.querySelectorAll("video").forEach(v => v.pause());
+  const item = modalItemsNavegacaoDoModalDoCard[index];
+  if (!item) return;
+
+  const clone = document.createElement(item.tagName.toLowerCase());
+  clone.src = item.dataset.src || item.src;
+
+  Object.assign(clone.style, {
+    maxWidth: "100%",
+    maxHeight: "80vh",
+    borderRadius: "10px",
+    transition: "opacity 0.3s ease"
+  });
+
+  if (item.tagName === "VIDEO") {
+    Object.assign(clone, {
+      muted: true,
+      autoplay: true,
+      loop: true,
+      playsInline: true,
+      controls: true
     });
-  });
-
-
-
-
-  // ---------------- Modal de imagem do card ----------------
-  const modalImgCard = document.getElementById("modalDeImgDoCard");
-  const modalImgCardContent = document.getElementById("modalDeImgDoCardContent");
-  const modalImgCardClose = document.getElementById("modalDeImgDoCardClose");
-  let modalItems = [];
-  let modalIndex = 0;
-
-  function openModalImgCard(items, startIndex = 0) {
-    modalItems = items;
-    modalIndex = startIndex;
-    showModalItem(modalIndex);
-    modalImgCard.style.display = "flex";
   }
 
-  function showModalItem(index) {
-    modalImgCardContent.querySelectorAll("img, video").forEach(el => el.remove());
-    const item = modalItems[index];
-    let element;
-    if (item.tagName === "IMG") {
-      element = document.createElement("img");
-      element.src = item.src;
-    } else if (item.tagName === "VIDEO") {
-      element = document.createElement("video");
-      element.src = item.src;
-      element.controls = true;
-      element.muted = true;
-      element.volume = 0;
-      element.autoplay = true;
-    
-      element.loop = true;
-    }
-    modalImgCardContent.appendChild(element);
-  }
+  modalContentNavegacaoDoModalDoCard.appendChild(clone);
+  counterNavegacaoDoModalDoCard.textContent = `${index + 1} / ${modalItemsNavegacaoDoModalDoCard.length}`;
+}
 
-  modalImgCardClose.addEventListener("click", () => modalImgCard.style.display = "none");
-  modalImgCard.addEventListener("click", e => {
-    if (e.target === modalImgCard) modalImgCard.style.display = "none";
+// ---- Abrir modal ----
+items.forEach((item, i) => {
+  item.addEventListener("click", () => {
+    modalItemsNavegacaoDoModalDoCard = Array.from(items);
+    modalIndexNavegacaoDoModalDoCard = i;
+    modalNavegacaoDoModalDoCard.style.display = "flex";
+    showModalItemNavegacaoDoModalDoCard(modalIndexNavegacaoDoModalDoCard);
   });
+});
 
-  let startXModal = 0;
-  modalImgCardContent.addEventListener("touchstart", e => startXModal = e.touches[0].clientX);
-  modalImgCardContent.addEventListener("touchend", e => {
-    const endX = e.changedTouches[0].clientX;
-    if (Math.abs(startXModal - endX) > 50) {
-      if (startXModal > endX) modalIndex = (modalIndex + 1) % modalItems.length;
-      else modalIndex = (modalIndex - 1 + modalItems.length) % modalItems.length;
-      showModalItem(modalIndex);
-    }
-  });
+// ---- Navegação ----
+prevBtnNavegacaoDoModalDoCard.addEventListener("click", () => {
+  modalIndexNavegacaoDoModalDoCard =
+    (modalIndexNavegacaoDoModalDoCard - 1 + modalItemsNavegacaoDoModalDoCard.length) %
+    modalItemsNavegacaoDoModalDoCard.length;
+  showModalItemNavegacaoDoModalDoCard(modalIndexNavegacaoDoModalDoCard);
+});
+
+nextBtnNavegacaoDoModalDoCard.addEventListener("click", () => {
+  modalIndexNavegacaoDoModalDoCard =
+    (modalIndexNavegacaoDoModalDoCard + 1) % modalItemsNavegacaoDoModalDoCard.length;
+  showModalItemNavegacaoDoModalDoCard(modalIndexNavegacaoDoModalDoCard);
+});
+
+// ---- Swipe ----
+let startXNavegacaoDoModalDoCard = 0;
+modalContentNavegacaoDoModalDoCard.addEventListener("mousedown", e => (startXNavegacaoDoModalDoCard = e.clientX));
+modalContentNavegacaoDoModalDoCard.addEventListener("mouseup", e => {
+  const diff = startXNavegacaoDoModalDoCard - e.clientX;
+  if (Math.abs(diff) > 50) diff > 0 ? nextBtnNavegacaoDoModalDoCard.click() : prevBtnNavegacaoDoModalDoCard.click();
+});
+
+modalContentNavegacaoDoModalDoCard.addEventListener("touchstart", e => (startXNavegacaoDoModalDoCard = e.touches[0].clientX));
+modalContentNavegacaoDoModalDoCard.addEventListener("touchend", e => {
+  const diff = startXNavegacaoDoModalDoCard - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) diff > 0 ? nextBtnNavegacaoDoModalDoCard.click() : prevBtnNavegacaoDoModalDoCard.click();
+});
+
+// ---- Fechar modal ----
+function fecharModalNavegacaoDoModalDoCard() {
+  modalNavegacaoDoModalDoCard.style.display = "none";
+  modalContentNavegacaoDoModalDoCard.querySelectorAll("video").forEach(v => v.pause());
+}
+
+closeBtnNavegacaoDoModalDoCard.addEventListener("click", fecharModalNavegacaoDoModalDoCard);
+modalNavegacaoDoModalDoCard.addEventListener("click", e => {
+  if (e.target === modalNavegacaoDoModalDoCard) fecharModalNavegacaoDoModalDoCard();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") fecharModalNavegacaoDoModalDoCard();
+});
+
 
   // ---------------- Carrinho ----------------
 
@@ -523,17 +829,31 @@ card.appendChild(checkboxLabel);
       fontSize: "1rem",
       margin: "10px 20px"
     });
-    confirmBtn.addEventListener("click", () => {
-      const produtosSelecionados = carrinho.map(p => p.titulo).join("\n");
-      let msg = `Olá! Gostaria de fazer o pedido de:\n${produtosSelecionados}`;
-      window.open(`https://wa.me/5547984694079?text=${encodeURIComponent(msg)}`, "_blank");
-      modal.remove();
-      document.body.style.overflow = "";
-    });
-    modalContent.appendChild(confirmBtn);
+ confirmBtn.addEventListener("click", () => {
+  const produtosSelecionados = carrinho
+    .map(p => `${p.titulo} - ${p.tamanho}`)
+    .join("\n");
 
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
+  // Define o texto com base na quantidade de itens
+  const textoMandala = carrinho.length > 1
+    ? "as mandalas"
+    : "a mandala";
+
+  const msg = `Olá! Gostaria de mais informações sobre ${textoMandala}:\n${produtosSelecionados}`;
+
+  window.open(
+    `https://wa.me/5547984694079?text=${encodeURIComponent(msg)}`,
+    "_blank"
+  );
+
+  modal.remove();
+  document.body.style.overflow = "";
+});
+
+modalContent.appendChild(confirmBtn);
+modal.appendChild(modalContent);
+document.body.appendChild(modal);
+
   });
 
   function atualizarMarcacoes() {
@@ -551,5 +871,5 @@ card.appendChild(checkboxLabel);
     btnCarrinho.style.display = carrinho.length > 0 ? "block" : "none";
     console.log("Marcação atualizada. Itens no carrinho:", carrinho.map(p => p.titulo));
   }
-
+  });
 }

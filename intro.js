@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       intro.style.display = "none";
       bemvindo.style.display = "block";
     }, 1200); // fade-out do intro
-  }, 3000); // tempo para as letras aparecerem
+  }, 1500); // tempo para as letras aparecerem
 
   // 3️⃣ Mantém a mensagem de bem-vindo mais tempo antes da logo expandir
   setTimeout(() => {
@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
       // Libera scroll
       body.classList.remove("animacaoAtivaAnimacao");
     }, 5000); // duração da logo expandida
-  }, 8200); // aumenta o delay da bem-vindo (antes era 6500)
+  }, 5200); // aumenta o delay da bem-vindo (antes era 6500)
 });
