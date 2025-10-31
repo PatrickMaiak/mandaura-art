@@ -5,8 +5,10 @@
     "titulo": "Mandala Árvore da Vida",
     "tamanho": "30 cm",
     "descricao": "Símbolo ancestral de conexão entre o céu e a terra, essa mandala representa crescimento, força e renovação. Cada galho e raiz entrelaçado reflete o equilíbrio entre corpo, mente e espírito, lembrando que todas as formas de vida estão interligadas.",
-    "imagens": ["img30cm/mandalaarvoredavida301.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Árvore da Vida 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaarvoredavida301.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20%C3%81rvore%20da%20Vida%2030.mp4"
   },
   {
     "id": 2,
@@ -14,8 +16,11 @@
     "titulo": "Mandala Harmonia Celeste",
     "tamanho": "30 cm",
     "descricao": "O azul e o verde se unem em perfeita harmonia, evocando calma, cura e serenidade. Essa mandala é ideal para ambientes de descanso e meditação, trazendo equilíbrio entre o emocional e o espiritual — como o encontro pacífico entre o céu e a natureza.",
-    "imagens": ["img30cm/mandalaazuleverde1.JPG", "img30cm/mandalaazuleverde2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Harmonia Celeste 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaazuleverde1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaazuleverde2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Harmonia%20Celeste%2030.mp4"
   },
   {
     "id": 3,
@@ -23,17 +28,23 @@
     "titulo": "Mandala da Vitalidade",
     "tamanho": "30 cm",
     "descricao": "Explosão de cores e energia vibrante! Essa mandala simboliza alegria, expansão e liberdade. Ela desperta o otimismo e reaviva a criatividade, sendo um lembrete de que a vida é feita de ciclos repletos de luz e movimento.",
-    "imagens": ["img30cm/mandalacolorida1.JPG", "img30cm/mandalacolorida2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Essência da Vitalidade 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalacolorida1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalacolorida2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Ess%C3%AAncia%20da%20Vitalidade%2030.mp4"
   },
   {
     "id": 4,
     "disponibilidade": true,
     "titulo": "Mandala Força da Serpente",
     "tamanho": "30 cm",
-    "descricao": "A serpente, símbolo da transformação e da cura, habita o centro dessa mandala. Representa o renascimento, a sabedoria antiga e o poder de trocar a própria pele — um convite para deixar o velho ir embora e permitir que o novo floresça.",
-    "imagens": ["img30cm/mandaladacobra1.JPG", "img30cm/mandaladacobra2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Força da Serpente 30.mp4"
+    "descricao": "A serpente, símbolo da transformação e da cura, habita o centro dessa mandala. Representa o renascimento, a sabedoria antiga e o poder de trocar a própria pele — um convite para deixar o velho ir embora e permitir que o novo se manifeste.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladacobra1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladacobra2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20For%C3%A7a%20da%20Serpente%2030.mp4"
   },
   {
     "id": 5,
@@ -41,8 +52,11 @@
     "titulo": "Mandala Flor de Cacto",
     "tamanho": "30 cm",
     "descricao": "Inspirada na força do cacto que floresce mesmo em meio ao deserto, essa mandala simboliza resiliência, proteção e adaptabilidade. Uma peça que transmite a energia de quem floresce mesmo em tempos áridos, guardando dentro de si o poder da vida.",
-    "imagens": ["img30cm/mandaladocacto1.JPG", "img30cm/mandaladocacto2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Flor de Cacto 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladocacto1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladocacto2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Flor%20de%20Cacto%2030.mp4"
   },
   {
     "id": 6,
@@ -50,8 +64,11 @@
     "titulo": "Mandala Raiz",
     "tamanho": "30 cm",
     "descricao": "Representa a conexão com a natureza e com o próprio centro. Seus tons terrosos e verdes evocam a força da terra e o equilíbrio entre corpo e espírito. O desenho central, semelhante a uma flor que se abre, representa crescimento e autoconhecimento, enquanto as camadas ao redor transmitem estabilidade e presença — um lembrete de que toda evolução começa pelas raízes.",
-    "imagens": ["img30cm/mandaladodeserto1.JPG", "img30cm/mandaladodeserto2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Essência do Deserto 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladodeserto1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladodeserto2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Ess%C3%AAncia%20do%20Deserto%2030.mp4"
   },
   {
     "id": 7,
@@ -59,8 +76,11 @@
     "titulo": "Mandala Alegria Solar",
     "tamanho": "30 cm",
     "descricao": "Com tons vibrantes de vermelho, azul, verde e amarelo, essa mandala representa o despertar da luz interior. Ela simboliza a energia vital que irradia do coração quando a alma encontra equilíbrio e leveza. Esta peça emana vibrações de alegria, inspiração e expansão espiritual — perfeita para ambientes que precisam de cor, vida e boas energias.",
-    "imagens": ["img30cm/mandalaalegriasolar1.JPG", "img30cm/mandalaalegriasolar2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Alegria Solar 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaalegriasolar1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaalegriasolar2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Alegria%20Solar%2030.mp4"
   },
   {
     "id": 8,
@@ -68,8 +88,11 @@
     "titulo": "Mandala do Pavão",
     "tamanho": "30 cm",
     "descricao": "O pavão é símbolo de beleza, despertar espiritual e autoconfiança. Essa mandala canaliza a energia da abundância e da expressão da alma. Seu brilho e suas cores irradiam autoestima, inspirando quem a contempla a se mostrar em sua melhor versão.",
-    "imagens": ["img30cm/mandaladopavao1.JPG", "img30cm/mandaladopavao2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala do Pavão 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladopavao1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladopavao2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20do%20Pav%C3%A3o%2030.mp4"
   },
   {
     "id": 9,
@@ -77,8 +100,11 @@
     "titulo": "Mandala do Sol",
     "tamanho": "30 cm",
     "descricao": "Fonte de luz e vitalidade, a Mandala do Sol desperta prosperidade, alegria e clareza interior. Seus tons vibrantes irradiam o poder da criação e o calor da vida que pulsa em cada ser, lembrando que a verdadeira força vem de dentro. Um símbolo de expansão e equilíbrio — um convite para brilhar com autenticidade e plenitude.",
-    "imagens": ["img30cm/mandaladosol1.JPG", "img30cm/mandaladosol2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala do Sol 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladosol1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladosol2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20do%20Sol%2030.mp4"
   },
   {
     "id": 10,
@@ -86,8 +112,11 @@
     "titulo": "Mandala Serenidade",
     "tamanho": "30 cm",
     "descricao": "A Mandala Serenidade expressa calma, harmonia e equilíbrio interior. Seus tons de azul e turquesa remetem à fluidez da água e à imensidão do céu, transmitindo leveza e paz. Ela convida ao silêncio interior e à tranquilidade da mente, ideal para quem busca um refúgio de paz em meio ao movimento da vida.",
-    "imagens": ["img30cm/mandalaflorazul1.JPG", "img30cm/mandalaflorazul2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Flor Azul 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaflorazul1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaflorazul2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Flor%20Azul%2030.mp4"
   },
   {
     "id": 11,
@@ -95,8 +124,10 @@
     "titulo": "Mandala Flor De Lótus",
     "tamanho": "30 cm",
     "descricao": "A Flor de Lótus simboliza o renascimento e a pureza espiritual. Esta mandala reflete a jornada da alma que floresce mesmo em meio às águas turvas da vida, trazendo calma, superação e iluminação interior. Ideal para quem busca paz e autoconhecimento.",
-    "imagens": ["img30cm/mandalaflordelotusde301.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Flor de Lótus 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaflordelotusde301.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Flor%20de%20L%C3%B3tus%2030.mp4"
   },
   {
     "id": 12,
@@ -104,8 +135,11 @@
     "titulo": "Mandala Girassol",
     "tamanho": "30 cm",
     "descricao": "Inspirada no girassol, que sempre busca a luz, esta mandala representa a força do otimismo e da renovação. Sua energia solar aquece o ambiente e desperta a alegria de viver, lembrando que o coração deve sempre se voltar para o brilho do sol interior.",
-    "imagens": ["img30cm/mandalagirassol1.JPG", "img30cm/mandalagirassol2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Girassol 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalagirassol1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalagirassol2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Girassol%2030.mp4"
   },
   {
     "id": 13,
@@ -113,8 +147,11 @@
     "titulo": "Mandala Energia Oculta",
     "tamanho": "30 cm",
     "descricao": "Com linhas intensas e cores profundas, a Mandala Energia Oculta conecta a introspecção com o poder do mistério. Ela simboliza o equilíbrio entre sombra e luz — um convite para abraçar sua autenticidade e transformar o obscuro em força e sabedoria.",
-    "imagens": ["img30cm/mandalagotica1.JPG", "img30cm/mandalagotica2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Energia Oculta 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalagotica1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalagotica2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Energia%20Oculta%2030.mp4"
   },
   {
     "id": 14,
@@ -122,8 +159,11 @@
     "titulo": "Mandala Flor do Amor",
     "tamanho": "30 cm",
     "descricao": "Com tons dourados e vermelho tinto, esta mandala simboliza o fogo do amor em sua forma mais pura — calor que protege, transforma e ilumina. O dourado reflete a sabedoria que nasce do coração, enquanto o vermelho profundo expressa paixão, força e vitalidade. Flor do Amor é um símbolo de energia divina e conexão sincera, irradiando calor, proteção e o poder curador do afeto verdadeiro.",
-    "imagens": ["img30cm/mandalamagenta (1).JPG", "img30cm/mandalamagenta (2).JPG"],
-    "video": "videos mandalas de 30cm/Mandala Flor do Amor 30 2.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalamagenta%20(1).JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalamagenta%20(2).JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Flor%20do%20Amor%2030%202.mp4"
   },
   {
     "id": 15,
@@ -131,8 +171,11 @@
     "titulo": "Mandala Primavera",
     "tamanho": "30 cm",
     "descricao": "A Mandala Primavera celebra o renascimento e a alegria que brotam com a chegada de novos ciclos. Suas cores vivas e harmoniosas refletem o florescer da natureza, simbolizando vitalidade, esperança e amor pela vida. As formas delicadas e radiantes evocam leveza e movimento, como pétalas dançando ao vento. É uma mandala que inspira positividade, desperta a criatividade e convida a ver beleza em cada recomeço.",
-    "imagens": ["img30cm/mandalanossa1.JPG", "img30cm/mandalanossa2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Coraçao da Natureza 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalanossa1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalanossa2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Cora%C3%A7ao%20da%20Natureza%2030.mp4"
   },
   {
     "id": 16,
@@ -140,8 +183,11 @@
     "titulo": "Mandala Olho do Cosmos",
     "tamanho": "30 cm",
     "descricao": "Com tons profundos de azul, branco e amarelo vibrante, esta mandala representa a conexão entre o universo e a consciência interior. Seu desenho hipnótico evoca a sensação de um olhar cósmico que observa e guia, trazendo harmonia, proteção e expansão espiritual. Ideal para meditação, decoração ou como símbolo de proteção e conexão cósmica.",
-    "imagens": ["img30cm/mandalaolhogrego301.JPG", "img30cm/mandalaolhogrego302.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Olho do Cosmos 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaolhogrego301.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaolhogrego302.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Olho%20do%20Cosmos%2030.mp4"
   },
   {
     "id": 17,
@@ -149,8 +195,11 @@
     "titulo": "Mandala Escudo Solar",
     "tamanho": "30 cm",
     "descricao": "Com cores vibrantes de vermelho, amarelo e preto, esta mandala evoca a força e a proteção de um escudo ancestral banhado pela luz do sol. Seus padrões remetem ao fogo, à coragem e à energia vital que pulsa no centro de cada ser. Escudo Solar é um símbolo de poder interior, expansão e clareza — como se o próprio sol guardasse quem a contempla.",
-    "imagens": ["img30cm/mandalaromana1.JPG", "img30cm/mandalaromana2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Escudo Solar 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaromana1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaromana2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Escudo%20Solar%2030.mp4"
   },
   {
     "id": 18,
@@ -158,8 +207,11 @@
     "titulo": "Mandala Mística",
     "tamanho": "30 cm",
     "descricao": "Representa a conexão com o invisível e o despertar da intuição. Seus tons profundos de roxo, azul e verde evocam o mistério do universo e a energia da espiritualidade. As formas simétricas e hipnóticas remetem à expansão da consciência e à sabedoria interior. É uma mandala que inspira autoconhecimento, proteção e confiança no poder sutil que guia o caminho.",
-    "imagens": ["img30cm/mandalaroxa1.JPG", "img30cm/mandalaroxa2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Portal da Consciência 30 3.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaroxa1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaroxa2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Portal%20da%20Consci%C3%AAncia%2030%203.mp4"
   },
   {
     "id": 19,
@@ -167,8 +219,11 @@
     "titulo": "Mandala Essência do Céu",
     "tamanho": "30 cm",
     "descricao": "Carrega o movimento sutil da expansão e da liberdade interior. Suas cores serenas remetem ao ar, à leveza e ao fluxo natural da vida. Essência do Céu inspira clareza, confiança e tranquilidade — um lembrete de que elevar-se também é um ato de fé e entrega.",
-    "imagens": ["img30cm/mandalavermelhoeazul1.JPG", "img30cm/mandalavermelhoeazul2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Essência do Céu30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalavermelhoeazul1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalavermelhoeazul2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Ess%C3%AAncia%20do%20C%C3%A9u30.mp4"
   },
   {
     "id": 20,
@@ -176,8 +231,11 @@
     "titulo": "Mandala Essência da Terra",
     "tamanho": "30 cm",
     "descricao": "Representa a força silenciosa que sustenta e dá vida. Seus tons quentes evocam o pulsar da natureza e o poder do enraizamento. Essência da Terra convida ao equilíbrio, à presença e à gratidão, fortalecendo corpo e espírito com estabilidade e plenitude.",
-    "imagens": ["img30cm/mandalavermelhoeverde1.JPG", "img30cm/mandalavermelhoeverde2.JPG"],
-    "video": "videos mandalas de 30cm/Mandala Essência da Terra 30.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalavermelhoeverde1.JPG",
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalavermelhoeverde2.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/Mandala%20Ess%C3%AAncia%20da%20Terra%2030.mp4"
   },
   {
     "id": 21,
@@ -185,8 +243,10 @@
     "titulo": "Mandala Mão De Fátima",
     "tamanho": "30 cm",
     "descricao": "Símbolo ancestral de proteção e harmonia, esta mandala representa a força que afasta as energias negativas e atrai boas vibrações. Sua presença desperta serenidade, fé e confiança, iluminando o ambiente com equilíbrio e paz. Mais do que uma peça decorativa, é um amuleto que transforma o espaço — irradiando luz, proteção e boas energias a quem o acolhe.",
-    "imagens": ["img30cm/maodefatimade302.JPG"],
-    "video": "videos mandalas de 30cm/Mão de Fátima 30 2.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/maodefatimade302.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2030cm/M%C3%A3o%20de%20F%C3%A1tima%2030%202.mp4"
   },
   {
     "id": 22,
@@ -194,8 +254,10 @@
     "titulo": "Flor de Lótus furta cor",
     "tamanho": "15 cm",
     "descricao": "A Flor de Lótus simboliza o renascimento e a pureza espiritual. Esta mandala reflete a jornada da alma que floresce mesmo em meio às águas turvas da vida, trazendo calma, superação e iluminação interior. Ideal para quem busca paz e autoconhecimento.",
-    "imagens": ["img15cm/Mandala flor de lotus furta 15cm .jpg "],
-    "video": "videos mandalas de 15cm/Mandala Flor de Lótus furta cor 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20flor%20de%20lotus%20furta%2015cm%20.jpg%20"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Flor%20de%20L%C3%B3tus%20furta%20cor%2015.mp4"
   },
   {
     "id": 23,
@@ -203,8 +265,10 @@
     "titulo": "Mandala Alma Colorida",
     "tamanho": "15 cm",
     "descricao": "Cheia de movimento e expressividade, esta mandala é pura celebração da existência. Suas cores intensas e contrastantes evocam liberdade, arte e alegria genuína. Alma Colorida é um lembrete de que viver também é brincar, criar e espalhar luz com autenticidade e espontaneidade.",
-    "imagens": ["img15cm/Mandala alergia circense 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Alma Colorida 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20alergia%20circense%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Alma%20Colorida%2015.mp4"
   },
   {
     "id": 24,
@@ -212,8 +276,10 @@
     "titulo": "Mandala Coração de Fogo",
     "tamanho": "15 cm",
     "descricao": "Esta mandala representa o poder que nasce no centro do ser — o fogo sagrado que protege, guia e transforma. Suas cores vermelhas e amarelas irradiam coragem, paixão e presença, lembrando que a verdadeira força vem de dentro. Coração de Fogo é o símbolo da alma que não se apaga, da luz interior que aquece, renova e mantém viva a essência de quem somos.",
-    "imagens": ["img15cm/Mandala vermelha e amarela 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Coração de Fogo 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20vermelha%20e%20amarela%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Cora%C3%A7%C3%A3o%20de%20Fogo%2015.mp4"
   },
   {
     "id": 25,
@@ -221,8 +287,10 @@
     "titulo": "Mandala Guardiã do Céu",
     "tamanho": "15 cm",
     "descricao": "Esta mandala simboliza a força silenciosa que protege e guia. Seus tons de azul profundo e amarelo revelam a união entre o espiritual e o terreno — o equilíbrio entre a mente serena e a luz da sabedoria. Guardiã do Céu representa proteção divina, clareza mental e expansão da consciência. É um amuleto visual que inspira confiança, serenidade e a sensação de estar envolto pela energia suave do universo.",
-    "imagens": ["img15cm/Mandala lagarto 15cm.jpg"],
-    "video": "videos mandalas de 15cm/Mandala Guardiã do Céu 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20lagarto%2015cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Guardi%C3%A3%20do%20C%C3%A9u%2015.mp4"
   },
   {
     "id": 26,
@@ -230,8 +298,10 @@
     "titulo": "Mandala Alegria Solar",
     "tamanho": "15 cm",
     "descricao": "Com tons vibrantes de vermelho, azul, verde e amarelo, essa mandala representa o despertar da luz interior. Ela simboliza a energia vital que irradia do coração quando a alma encontra equilíbrio e leveza. Esta peça emana vibrações de alegria, inspiração e expansão espiritual — perfeita para ambientes que precisam de cor, vida e boas energias.",
-    "imagens": ["img15cm/Mandala do palhaco 15cm.jpg"],
-    "video": "videos mandalas de 15cm/Mandala Alegria Solar 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20do%20palhaco%2015cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Alegria%20Solar%2015.mp4"
   },
   {
     "id": 27,
@@ -239,8 +309,10 @@
     "titulo": "Mandala do Sol",
     "tamanho": "15 cm",
     "descricao": "Fonte de luz e vitalidade, a Mandala do Sol desperta prosperidade, alegria e clareza interior. Seus tons vibrantes irradiam o poder da criação e o calor da vida que pulsa em cada ser, lembrando que a verdadeira força vem de dentro. Um símbolo de expansão e equilíbrio — um convite para brilhar com autenticidade e plenitude.",
-    "imagens": ["img15cm/Mandala do sol 15cm.jpg"],
-    "video": "videos mandalas de 15cm/Mandala do Sol 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20do%20sol%2015cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20do%20Sol%2015.mp4"
   },
   {
     "id": 28,
@@ -248,8 +320,10 @@
     "titulo": "Mandala Sopro Azul",
     "tamanho": "15 cm",
     "descricao": "Suave como a brisa que toca as folhas, esta mandala traz a energia da leveza e do equilíbrio. Seus tons de azul refletem calma, cura e liberdade interior, como um vento que limpa e renova. Sopro Azul é um convite ao silêncio e à fluidez — uma lembrança de que a força também habita na suavidade e no movimento sereno da vida.",
-    "imagens": ["img15cm/Mandala estrela azul 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Sopro Azul 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20estrela%20azul%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Sopro%20Azul%2015.mp4"
   },
   {
     "id": 29,
@@ -257,8 +331,10 @@
     "titulo": "Mandala Flor Azul",
     "tamanho": "15 cm",
     "descricao": "Delicada e profunda, a Mandala Flor Azul simboliza tranquilidade e sabedoria interior. Seu azul espiritual acalma o coração e inspira confiança. Uma mandala para quem busca leveza e quer se reconectar com a serenidade da própria essência.",
-    "imagens": ["img15cm/Mandala flor azul 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Flor Azul 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20flor%20azul%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Flor%20Azul%2015.mp4"
   },
   {
     "id": 30,
@@ -266,8 +342,10 @@
     "titulo": "Mandala Luz da Manhã",
     "tamanho": "15 cm",
     "descricao": "Esta mandala reflete a pureza e o frescor do amanhecer. Seus tons de amarelo e rosa irradiam calor, alegria e renovação — como os primeiros raios de sol que tocam a terra e despertam a vida. Luz da Manhã inspira otimismo e presença, convidando a alma a florescer em cada novo dia com energia suave e esperançosa.",
-    "imagens": ["img15cm/Mandala rosa e amarelo 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Luz da Manhã 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20rosa%20e%20amarelo%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Luz%20da%20Manh%C3%A3%2015.mp4"
   },
   {
     "id": 31,
@@ -275,8 +353,10 @@
     "titulo": "Mandala Alma Estelar",
     "tamanho": "15 cm",
     "descricao": "Esta mandala reflete a luz que habita dentro de cada ser, como uma estrela silenciosa no vasto universo interior. Seus tons de roxo e violeta representam a intuição, a espiritualidade e o despertar da consciência. Alma Estelar é um portal de calma e expansão — um lembrete de que somos feitos da mesma essência que brilha no céu, guiados pela energia da sabedoria e da harmonia cósmica.",
-    "imagens": ["img15cm/Mandala roxa 15cm.jpg"],
-    "video": "videos mandalas de 15cm/Mandala Alma Estelar 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20roxa%2015cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Alma%20Estelar%2015.mp4"
   },
   {
     "id": 32,
@@ -284,88 +364,152 @@
     "titulo": "Mandala Jardim de Luz",
     "tamanho": "15 cm",
     "descricao": "Cores que dançam em harmonia formam esta mandala vibrante, como um vitral iluminado pelo sol. Cada tom reflete equilíbrio e alegria, criando uma energia suave que revitaliza o ambiente. Jardim de Luz representa diversidade, união e a beleza de cada parte que compõe o todo — uma celebração da vida em cores.",
-    "imagens": ["img15cm/Mandala vitral 15cm.JPG"],
-    "video": "videos mandalas de 15cm/Mandala Jardim de Luz 15.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img15cm/Mandala%20vitral%2015cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Jardim%20de%20Luz%2015.mp4"
   },
   {
     "id": 33,
     "disponibilidade": true,
-    "titulo": "Mandala Girassol",
-    "tamanho": "11 cm",
-    "descricao": "Inspirada no girassol, que sempre busca a luz, esta mandala representa a força do otimismo e da renovação. Sua energia solar aquece o ambiente e desperta a alegria de viver, lembrando que o coração deve sempre se voltar para o brilho do sol interior.",
-    "imagens": ["img11cm/Mandala girassol 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Girassol 11.mp4"
+    "titulo": "Mandala Árvore da Vida",
+    "tamanho": "15 cm",
+    "descricao": "Símbolo ancestral de conexão entre o céu e a terra, essa mandala representa crescimento, força e renovação. Cada galho e raiz entrelaçado reflete o equilíbrio entre corpo, mente e espírito, lembrando que todas as formas de vida estão interligadas.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandalaarvoredavida301.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2015cm/Mandala%20Arvore%20da%20vida%2015.mp4"
   },
   {
     "id": 34,
     "disponibilidade": true,
-    "titulo": "Mandala Portal Azul",
+    "titulo": "Mandala Girassol",
     "tamanho": "11 cm",
-    "descricao": "Entre formas que se abrem em ondas e pétalas, esta mandala se revela como um portal para a serenidade interior. O azul profundo conduz à calma, enquanto o branco simboliza pureza e expansão da consciência. Portal Azul é um convite ao silêncio e à introspecção — um espelho da alma que reflete paz, sabedoria e o infinito que habita dentro de cada ser.",
-    "imagens": ["img11cm/Mandala flor azul e branco.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Portal Azul 11.mp4"
+    "descricao": "Inspirada no girassol, que sempre busca a luz, esta mandala representa a força do otimismo e da renovação. Sua energia solar aquece o ambiente e desperta a alegria de viver, lembrando que o coração deve sempre se voltar para o brilho do sol interior.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20girassol%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Girassol%2011.mp4"
   },
   {
     "id": 35,
     "disponibilidade": true,
-    "titulo": "Mandala Harmonia Celeste",
+    "titulo": "Mandala Portal Azul",
     "tamanho": "11 cm",
-    "descricao": "O azul e o verde se unem em perfeita harmonia, evocando calma, cura e serenidade. Essa mandala é ideal para ambientes de descanso e meditação, trazendo equilíbrio entre o emocional e o espiritual — como o encontro pacífico entre o céu e a natureza.",
-    "imagens": ["img11cm/Mandala azul e verde 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Harmonia Celeste 11.mp4"
+    "descricao": "Entre formas que se abrem em ondas e pétalas, esta mandala se revela como um portal para a serenidade interior. O azul profundo conduz à calma, enquanto o branco simboliza pureza e expansão da consciência. Portal Azul é um convite ao silêncio e à introspecção — um espelho da alma que reflete paz, sabedoria e o infinito que habita dentro de cada ser.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20flor%20azul%20e%20branco.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Portal%20Azul%2011.mp4"
   },
   {
     "id": 36,
     "disponibilidade": true,
-    "titulo": "Mandala Essência da Vitalidade",
+    "titulo": "Mandala Harmonia Celeste",
     "tamanho": "11 cm",
-    "descricao": "Explosão de cores e energia vibrante! Essa mandala simboliza alegria, expansão e liberdade. Ela desperta o otimismo e reaviva a criatividade, sendo um lembrete de que a vida é feita de ciclos repletos de luz e movimento.",
-    "imagens": ["img11cm/Mandala colorida 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Essência da Vitalidade 11.mp4"
+    "descricao": "O azul e o verde se unem em perfeita harmonia, evocando calma, cura e serenidade. Essa mandala é ideal para ambientes de descanso e meditação, trazendo equilíbrio entre o emocional e o espiritual — como o encontro pacífico entre o céu e a natureza.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20azul%20e%20verde%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Harmonia%20Celeste%2011.mp4"
   },
   {
     "id": 37,
     "disponibilidade": true,
-    "titulo": "Mandala do Sol",
+    "titulo": "Mandala Essência da Vitalidade",
     "tamanho": "11 cm",
-    "descricao": "Fonte de luz e vitalidade, a Mandala do Sol desperta prosperidade, alegria e clareza interior. Seus tons vibrantes irradiam o poder da criação e o calor da vida que pulsa em cada ser, lembrando que a verdadeira força vem de dentro. Um símbolo de expansão e equilíbrio — um convite para brilhar com autenticidade e plenitude.",
-    "imagens": ["img11cm/Mandala do sol 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala do Sol 11.mp4"
+    "descricao": "Explosão de cores e energia vibrante! Essa mandala simboliza alegria, expansão e liberdade. Ela desperta o otimismo e reaviva a criatividade, sendo um lembrete de que a vida é feita de ciclos repletos de luz e movimento.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20colorida%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Ess%C3%AAncia%20da%20Vitalidade%2011.mp4"
   },
   {
     "id": 38,
     "disponibilidade": true,
-    "titulo": "Mandala Olho do Cosmos",
+    "titulo": "Mandala do Sol",
     "tamanho": "11 cm",
-    "descricao": "Com tons profundos de azul, branco e amarelo vibrante, esta mandala representa a conexão entre o universo e a consciência interior. Seu desenho hipnótico evoca a sensação de um olhar cósmico que observa e guia, trazendo harmonia, proteção e expansão espiritual. Ideal para meditação, decoração ou como símbolo de proteção e conexão cósmica.",
-    "imagens": ["img11cm/Mandala olho azul e amarelo 11cm.JPG"],
-    "video": "videos mandalas de 11cm/Mandala Olho do Cosmos 11.mp4"
+    "descricao": "Fonte de luz e vitalidade, a Mandala do Sol desperta prosperidade, alegria e clareza interior. Seus tons vibrantes irradiam o poder da criação e o calor da vida que pulsa em cada ser, lembrando que a verdadeira força vem de dentro. Um símbolo de expansão e equilíbrio — um convite para brilhar com autenticidade e plenitude.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20do%20sol%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20do%20Sol%2011.mp4"
   },
   {
     "id": 39,
     "disponibilidade": true,
-    "titulo": "Mandala Olho Grego",
+    "titulo": "Mandala Olho do Cosmos",
     "tamanho": "11 cm",
-    "descricao": "Símbolo ancestral de proteção e luz, esta mandala guarda em suas camadas o poder de afastar energias densas e atrair boas vibrações. O azul profundo representa o olhar sereno que tudo observa, enquanto os detalhes dourados trazem força, sabedoria e expansão espiritual. Olho Grego é um amuleto de clareza e proteção — um lembrete de que o verdadeiro escudo está na pureza do olhar e na paz interior.",
-    "imagens": ["img11cm/Mandala olho grego 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Olho Grego 11.mp4"
+    "descricao": "Com tons profundos de azul, branco e amarelo vibrante, esta mandala representa a conexão entre o universo e a consciência interior. Seu desenho hipnótico evoca a sensação de um olhar cósmico que observa e guia, trazendo harmonia, proteção e expansão espiritual. Ideal para meditação, decoração ou como símbolo de proteção e conexão cósmica.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20olho%20azul%20e%20amarelo%2011cm.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Olho%20do%20Cosmos%2011.mp4"
   },
   {
     "id": 40,
     "disponibilidade": true,
-    "titulo": "Mandala Essência do Céu",
+    "titulo": "Mandala Olho Grego",
     "tamanho": "11 cm",
-    "descricao": "Carrega o movimento sutil da expansão e da liberdade interior. Suas cores serenas remetem ao ar, à leveza e ao fluxo natural da vida. Essência do Céu inspira clareza, confiança e tranquilidade — um lembrete de que elevar-se também é um ato de fé e entrega.",
-    "imagens": ["img11cm/Mandala azul e vermelho 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Essência do Céu 11.mp4"
+    "descricao": "Símbolo ancestral de proteção e luz, esta mandala guarda em suas camadas o poder de afastar energias densas e atrair boas vibrações. O azul profundo representa o olhar sereno que tudo observa, enquanto os detalhes dourados trazem força, sabedoria e expansão espiritual. Olho Grego é um amuleto de clareza e proteção — um lembrete de que o verdadeiro escudo está na pureza do olhar e na paz interior.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20olho%20grego%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Olho%20Grego%2011.mp4"
   },
   {
     "id": 41,
     "disponibilidade": true,
+    "titulo": "Mandala Essência do Céu",
+    "tamanho": "11 cm",
+    "descricao": "Carrega o movimento sutil da expansão e da liberdade interior. Suas cores serenas remetem ao ar, à leveza e ao fluxo natural da vida. Essência do Céu inspira clareza, confiança e tranquilidade — um lembrete de que elevar-se também é um ato de fé e entrega.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20azul%20e%20vermelho%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Ess%C3%AAncia%20do%20C%C3%A9u%2011.mp4"
+  },
+  {
+    "id": 42,
+    "disponibilidade": true,
     "titulo": "Mandala Essência da Terra",
     "tamanho": "11 cm",
     "descricao": "Representa a força silenciosa que sustenta e dá vida. Seus tons quentes evocam o pulsar da natureza e o poder do enraizamento. Essência da Terra convida ao equilíbrio, à presença e à gratidão, fortalecendo corpo e espírito com estabilidade e plenitude.",
-    "imagens": ["img11cm/Mandala vermelha e verde 11cm.jpg"],
-    "video": "videos mandalas de 11cm/Mandala Essência da Terra 11.mp4"
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img11cm/Mandala%20vermelha%20e%20verde%2011cm.jpg"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Ess%C3%AAncia%20da%20Terra%2011.mp4"
+  },
+  {
+    "id": 43,
+    "disponibilidade": true,
+    "titulo": "Mandala do Pavão",
+    "tamanho": "11 cm",
+    "descricao": "O pavão é símbolo de beleza, despertar espiritual e autoconfiança. Essa mandala canaliza a energia da abundância e da expressão da alma. Seu brilho e suas cores irradiam autoestima, inspirando quem a contempla a se mostrar em sua melhor versão.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladopavao1.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20do%20Pav%C3%A3o.mp4"
+  },
+  {
+    "id": 44,
+    "disponibilidade": true,
+    "titulo": "Mandala Oceano Interior",
+    "tamanho": "11 cm",
+    "descricao": "Nas profundezas do ser, existe um mar calmo — vasto, azul e silencioso. A Mandala Oceano Interior simboliza esse espaço de paz onde os pensamentos se aquietam e a alma se expande. Cada camada representa uma onda de autoconhecimento, um mergulho em direção ao equilíbrio entre emoção e razão.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladopavao1.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20Azul.mp4"
+  },
+  {
+    "id": 45,
+    "disponibilidade": true,
+    "titulo": "Mandala Flor da Aurora",
+    "tamanho": "11 cm",
+    "descricao": "A Mandala Flor da Aurora representa o renascimento da luz e o despertar interior. Com tons de azul, verde e violeta, reflete a serenidade das primeiras horas do dia e a energia da transformação. Quando a luz encontra suas cores, cria reflexos que purificam e harmonizam o ambiente.",
+    "imagens": [
+      "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/img30cm/mandaladopavao1.JPG"
+    ],
+    "video": "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/videos%20mandalas%20de%2011cm/Mandala%20flor%20da%20Aurora%2011.mp4"
   }
 ]

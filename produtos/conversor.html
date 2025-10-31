@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atualizar Caminhos JSON</title>
+</head>
+<body>
+  <h2>Atualizador de Caminhos (GitHub CDN)</h2>
+  <input type="file" id="inputJson" accept=".json">
+  <button id="btnProcessar">Atualizar Caminhos</button>
+
+  <pre id="saida" style="white-space: pre-wrap; background: #f0f0f0; padding: 10px; border-radius: 6px; margin-top: 10px;"></pre>
+
+  <script>
+    const baseURL = "https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-media@main/";
+
+    document.getElementById("btnProcessar").addEventListener("click", () => {
+      const fileInput = document.getElementById("inputJson");
+      if (!fileInput.files.length) {
+        alert("Selecione o arquivo JSON primeiro!");
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        try {
+          const produtos = JSON.parse(e.target.result);
+
+          const produtosAtualizados = produtos.map((produto) => {
+            if (produto.imagens && Array.isArray(produto.imagens)) {
+              produto.imagens = produto.imagens.map((img) =>
+                baseURL + encodeURI(img.replace(/\\/g, "/"))
+              );
+            }
+
+            if (produto.video) {
+              produto.video = baseURL + encodeURI(produto.video.replace(/\\/g, "/"));
+            }
+
+            return produto;
+          });
+
+          const novoJson = JSON.stringify(produtosAtualizados, null, 2);
+
+          // Mostra na tela
+          document.getElementById("saida").textContent = novoJson;
+
+          // Cria link pra download
+          const blob = new Blob([novoJson], { type: "application/json" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "produtos_atualizado.json";
+          link.textContent = "⬇️ Baixar JSON Atualizado";
+          link.style.display = "block";
+          link.style.marginTop = "10px";
+          document.body.appendChild(link);
+
+        } catch (err) {
+          alert("Erro ao ler o JSON: " + err.message);
+        }
+      };
+
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>

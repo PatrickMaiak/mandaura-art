@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Carrega o JSON com os produtos
-  fetch("produtos/produtos.json")
+  // fetch("produtos/produtos.json")
+  fetch("https://cdn.jsdelivr.net/gh/PatrickMaiak/mandaura-data@main/produtos.json")
     .then(response => response.json())
     .then(produtos => {
 
