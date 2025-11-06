@@ -352,47 +352,66 @@ if (mostrarVideoPrimeiro) {
 
 
 
-// ---------- Lazy Load + Controle de Reprodução (1 vídeo por vez) ----------
+// ---------- Lazy Load otimizado + Delay de 2s + Controle de 1 vídeo ativo ----------
 const lazyMedia = carousel.querySelectorAll(".lazy-media");
 
-const mediaObserver = new IntersectionObserver((entries) => {
+// Guarda temporizadores de visibilidade
+const visibilidadeTimers = new Map();
+
+const mediaObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     const el = entry.target;
     const isVideo = el.tagName === "VIDEO";
     const src = el.dataset.src;
 
     if (entry.isIntersecting) {
-      if (el.classList.contains("lazy-media")) {
-        if (el.tagName === "IMG") {
-          const realImg = new Image();
-          realImg.src = src;
-          realImg.onload = () => {
+      // Espera 2 segundos de visibilidade antes de carregar
+      const timer = setTimeout(() => {
+        if (el.classList.contains("lazy-media") && src) {
+          if (el.tagName === "IMG") {
+            const realImg = new Image();
+            realImg.src = src;
+            realImg.onload = () => {
+              el.src = src;
+              el.classList.remove("lazy-media");
+            };
+          } else if (isVideo) {
             el.src = src;
+            el.preload = "metadata";
             el.classList.remove("lazy-media");
-          };
-        } else if (isVideo) {
-          el.src = src;
-          el.preload = "metadata";
-          el.classList.remove("lazy-media");
-          el.addEventListener("canplay", () => el.play().catch(() => {}), { once: true });
+            el.addEventListener("canplay", () => el.play().catch(() => {}), { once: true });
+          }
         }
+
+        // Controle: apenas um vídeo rodando por vez
+        if (isVideo) {
+          document.querySelectorAll("video.carousel-item").forEach(v => {
+            if (v !== el && !v.paused) v.pause();
+          });
+          el.play().catch(() => {});
+        }
+
+        // Para de observar após carregar
+        observer.unobserve(el);
+        visibilidadeTimers.delete(el);
+      }, 800); // 2 segundos
+
+      visibilidadeTimers.set(el, timer);
+    } else {
+      // Saiu da tela antes de completar o tempo → cancela
+      if (visibilidadeTimers.has(el)) {
+        clearTimeout(visibilidadeTimers.get(el));
+        visibilidadeTimers.delete(el);
       }
 
-      // Controle: apenas um vídeo rodando
-      if (isVideo) {
-        document.querySelectorAll("video.carousel-item").forEach(v => {
-          if (v !== el && !v.paused) v.pause();
-        });
-        el.play().catch(() => {});
-      }
-    } else {
+      // Pausa vídeos fora da tela
       if (isVideo && !el.paused) el.pause();
     }
   });
-}, { rootMargin: "1000px", threshold: 0.1 });
+}, { rootMargin: "400px", threshold: 0.3 });
 
+// Inicia observação
 lazyMedia.forEach(el => mediaObserver.observe(el));
-
 
 
 
