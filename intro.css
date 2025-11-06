@@ -1,0 +1,132 @@
+.animacaoContainerAnimacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+/* Bloqueia scroll enquanto a animação estiver ativa */
+body.animacaoAtivaAnimacao {
+  overflow: hidden !important;
+}
+
+/* INTRO */
+.introAnimacao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.logoAnimacao {
+    
+  font-family: "Fuzzy Bubbles", sans-serif;
+ 
+
+
+  color: #f92f8a;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  gap: 5px;
+  letter-spacing: 2px;
+}
+
+.letraAnimacao {
+  opacity: 0;
+  animation: letraCineAnimacao 0.7s forwards;
+}
+
+.letraAnimacao:nth-child(1){animation-delay:0.1s}
+.letraAnimacao:nth-child(2){animation-delay:0.25s}
+.letraAnimacao:nth-child(3){animation-delay:0.4s}
+.letraAnimacao:nth-child(4){animation-delay:0.55s}
+.letraAnimacao:nth-child(5){animation-delay:0.7s}
+.letraAnimacao:nth-child(6){animation-delay:0.85s}
+.letraAnimacao:nth-child(7){animation-delay:1s}
+.letraAnimacao:nth-child(8){animation-delay:1.15s}
+
+@keyframes letraCineAnimacao {
+  0% { opacity:0; transform:translateY(80px) scale(0.8) rotateX(90deg); }
+  60% { opacity:1; transform:translateY(-10px) scale(1.1); }
+  100% { opacity:1; transform:translateY(0) scale(1) rotateX(0deg); text-shadow:0 0 25px #f92f8a; }
+}
+
+/* BEM-VINDO */
+.bemvindoAnimacao {
+    font-family: "Fuzzy Bubbles", sans-serif;
+  display: none;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: aparecerAnimacao 2.5s ease-in forwards;
+  z-index: 9;
+}
+
+.bemvindoAnimacao h2 {
+  color: #f92f8a;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+@keyframes aparecerAnimacao {
+  from {opacity: 0; transform: translate(-50%, -60%) scale(0.95);}
+  to {opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+
+/* LOGO EXPAND */
+.logoExpandAnimacao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 51.57%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 8;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  animation: expandirLogoAnimacao 5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+@media (min-width: 900px) {
+  .logoExpandAnimacao {
+    transform-origin: 50% 51.5%; /* ajuste o valor até centralizar no desktop */
+  }
+}
+
+@keyframes expandirLogoAnimacao {
+  0% { transform: translate(-50%, -50%) scale(0.02) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(185) rotate(900deg); opacity: 0; }
+}
+
+/* FADE OUT */
+.fadeOutAnimacao {
+  animation: fadeOutAnimacao 1.2s ease forwards;
+}
+
+@keyframes fadeOutAnimacao {
+  from {opacity:1;}
+  to {opacity:0; visibility:hidden;}
+}
+
+@media (max-width:600px) {
+  .logoAnimacao { font-size:2.5rem; }
+  .bemvindoAnimacao h2 { font-size:1.5rem; }
+}
