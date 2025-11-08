@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       intro.style.display = "none";
       bemvindo.style.display = "block";
-    }, 1200); // fade-out do intro
-  }, 1500); // tempo para as letras aparecerem
+    }, 900); // fade-out do intro
+  }, 1100); // tempo para as letras aparecerem
 
   // 3️⃣ Mantém a mensagem de bem-vindo mais tempo antes da logo expandir
   setTimeout(() => {

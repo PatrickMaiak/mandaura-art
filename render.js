@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           sessionStorage.setItem("animacaoRodou", "true");
-        }, 13100);
+        }, 14100);
 
       } else {
         // Se já rodou, inicia o site direto e garante que a animação está oculta
