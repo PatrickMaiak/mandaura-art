@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
+<!-- <head>
 
-<!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YNT10S4B3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,12 +15,1190 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/ico/favicon (1).ico" type="image/x-icon">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fuzzy+Bubbles:wght@400;700&display=swap"
+  
     rel="stylesheet">
   <link rel="stylesheet" href="intro.css">
-  <title>Mandaura Catalogo</title>
+  <title>Mandaura</title>
+  <style>
+    :root {
+      --primary: #f92f8a;
+      --secondary: #a6dcef;
+      --background: #f1f1f1;
+      --text: #333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 12px 20px;
+      z-index: 1000;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-sizing: border-box;
+      /* garante que padding não aumente a largura */
+      overflow-x: hidden;
+      /* evita scroll horizontal */
+
+    }
+
+    .navbar.hidden {
+      transform: translateY(-100%);
+    }
+
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      /* impede que elementos quebrem linha */
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* Logo quadrada com sombra para fora */
+    .logo img {
+      width: 50px !important;
+      /* tamanho base */
+      height: 50px !important;
+      border-radius: 5px;
+      /* cantos levemente arredondados */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      /* sombra externa */
+      transition: all 0.3s ease;
+    }
+
+    /* Efeito hover para aumentar e destacar */
+    .logo img:hover {
+      width: 55px !important;
+      height: 55px !important;
+    }
+
+    .fuzzy-bubbles-regular {
+      font-family: "Fuzzy Bubbles", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .fuzzy-bubbles-bold {
+      font-family: "Fuzzy Bubbles", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+
+
+
+    .logo .site-name {
+      font-family: "Fuzzy Bubbles", sans-serif;
+
+      letter-spacing: -0.07em;
+    }
+
+
+    /* Nome do site */
+    .logo .site-name {
+      font-size: 1.8rem;
+
+      font-weight: bold;
+      color: #f92f8a;
+      /* cor primária do site */
+      user-select: none;
+    }
+
+
+
+
+
+    .logo img {
+      width: 35px;
+      height: 35px;
+    }
+
+    */ .site-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    /* ===== MENU ===== */
+    .menu {
+      display: flex;
+      gap: 150px;
+    }
+
+    .menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .menu a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: var(--primary);
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      /* espaçamento entre barras */
+      cursor: pointer;
+      z-index: 1100;
+      transition: transform 0.5s ease;
+    }
+
+    .hamburger span {
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.5s ease;
+    }
+
+    /* Hamburger ativo -> X suave */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(47deg) translate(6px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-47deg) translate(6px, -6px);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-title {
+  display: none;
+}
+
+.theme-switch {
+    display: none;
+  }
+
+ .menu-links {
+    display: flex;
+    flex-direction: row;
+    gap: 122px;
+    width: 100%;
+  }
+
+
+
+
+@media (max-width: 768px) {
+  .hamburger{display: flex;}
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2e2e2e;
+    position: fixed;
+    top: 60px;
+    right: -250px;
+    width: 230px;
+    padding: 25px 20px;
+    border-radius: 0 0 0 16px;
+    z-index: 1000;
+    box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: right 0.5s ease, opacity 0.5s ease, background 0.3s;
+  }
+
+  .menu.active {
+    right: 0;
+    opacity: 1;
+  }
+
+  /* ---------- Título ---------- */
+  .menu-title {
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 85px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* ---------- Links ---------- */
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: -60px;
+  }
+
+  .menu-links a {
+    text-decoration: none;
+    color: #f1f1f1;
+    background: #444;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .menu-links a:hover {
+    transform: translateX(8px);
+    background: #ff6f61;
+  }
+
+  /* ---------- Switch de Tema ---------- */
+  .theme-switch {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #444;
+    width: 70px;
+    height: 34px;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 0 6px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+    transition: background 0.4s ease;
+  }
+
+  .switch .sun,
+  .switch .moon {
+    font-size: 18px;
+    z-index: 2;
+    user-select: none;
+  }
+
+  .switch .slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s ease, background 0.3s;
+  }
+
+  /* Estado ativo (modo escuro) */
+  #darkModeToggle:checked + .switch {
+    background: #ff6f61;
+  }
+
+  #darkModeToggle:checked + .switch .slider {
+    transform: translateX(48px);
+    background: #222;
+  }
+
+  #darkModeToggle {
+    display: none;
+  }
+
+  /* ---------- Dark mode geral ---------- */
+  body.dark .menu {
+    background: #1b1b1b;
+  }
+
+  body.dark .menu-links a {
+    background: #333;
+  }
+
+  body.dark .menu-links a:hover {
+    background: #ffb703;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1200px;
+      width: 100%;
+      padding-top: 80px;
+    }
+
+    .card {
+      cursor: pointer;
+      position: relative;
+      background: white;
+      border-radius: 15px;
+      
+      padding: 15px;
+      flex: 1 1 300px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease 0.1s, background 0.3s ease 0.1s;
+
+      
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.343);
+      
+      transform: translateY(-2px);
+    }
+
+    .card.selected {
+      border: 2px solid var(--primary);
+      
+  
+      padding: 13px; /* 15 - 2 → mantém o mesmo tamanho visual */
+
+
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+    }
+
+    .carousel-item {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+     
+
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background: black;
+       object-position: 40% 30%;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+      pointer-events: none;
+      /* desativa cliques na div pai */
+    }
+
+    .carousel-controls button {
+      background: rgba(0, 0, 0, 0.552);
+      border: none;
+      color: white;
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      pointer-events: auto;
+      font-size: 1.5em;
+      /* mantém os botões clicáveis */
+    }
+   /* Hover no desktop */
+.carousel-controls button:hover {
+  background: var(--primary);
+}
+
+/* "Active" no toque mobile (quando o dedo está pressionando) */
+@media (hover: none) and (pointer: coarse) {
+  .carousel-controls button:hover {
+    background: rgba(0, 0, 0, 0.552); /* desativa hover preso */
+  }
+
+  .carousel-controls button:active {
+    background: var(--primary);
+    transform: scale(0.95);
+  }
+}
+
+    .info {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .info h2 {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .info p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Checkbox container */
+    .checkbox-container {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .checkbox-container input {
+      display: none;
+      /* esconde padrão */
+    }
+
+    .checkmark {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--primary);
+      border-radius: 6px;
+      display: inline-block;
+      position: relative;
+      transition: 0.2s;
+    }
+
+    .checkbox-container input:checked+.checkmark {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .checkbox-container input:checked+.checkmark::after {
+      content: "✔";
+      color: #fff;
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      left: 3px;
+    }
+
+    /* Botão carrinho fixo */
+    #btnCarrinho {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+
+      .catalogo {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .modal-de-img {
+      display: none;
+      /* invisível por padrão */
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-de-img-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-de-img-content img,
+    .modal-de-img-content video {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2100;
+    }
+
+    #scrollToTop {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: #5cbf7e;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(20px);
+    }
+
+    #scrollToTop.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .lazy-media {
+      background: #111;
+      min-height: 200px;
+      /* ou o tamanho médio das tuas imagens */
+      display: block;
+    }
+
+
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222;
+      --card-bg: #f9f9f9;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      transition: background 0.3s;
+    }
+
+    /* Dark mode */
+    body.dark {
+      --bg-color: #0e0e0e;
+      --text-color: #f1f1f1;
+      --card-bg: #1b1b1b;
+    }
+
+    /* Animação no logo */
+    .logo {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo.active {
+      transform: scale(1.1);
+    }
+
+    /* Tooltip escondida por padrão */
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-260%) translateY(-120%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    /* Mostra tooltip no hover */
+    .logo:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+
+    .carousel-item {
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item.lazy-media {
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== SEÇÃO SOBRE AS MANDALAS ===== */
+/* ===== NOVO DESIGN SOBRE AS MANDALAS ===== */
+.sobre-mandalas-nova {
+  width: 100%;
+  position: relative;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 120px 20px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  overflow: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.sobre-mandalas-nova h2, 
+.sobre-mandalas-nova h3 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.sobre-mandalas-nova p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Container geral */
+.container-mandala {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Introdução */
+.intro-mandala {
+  text-align: center;
+  max-width: 800px;
+  padding: 1em;
+  margin: 1 auto;
+}
+
+.intro-mandala h2 {
+  color: var(--primary);
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+/* Bloco de material */
+.material-mandala {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.material-mandala .texto {
+  flex: 1;
+}
+
+.material-mandala .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.material-mandala img {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.6s ease;
+}
+
+.material-mandala img:hover {
+  transform: scale(1.05);
+}
+
+/* Tipos de mandalas */
+.tipos-mandala {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tipos-mandala .tipo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.tipos-mandala .tipo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.tipos-mandala .imagem img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.tipos-mandala .imagem img:hover {
+  transform: scale(1.08);
+}
+
+/* Envio */
+.envio-mandala {
+  background: var(--primary);
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.envio-mandala h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* ===== IMAGEM ANIMADA DE FUNDO (MANDALA) ===== */
+.imagem-mandala {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.imagem-mandala img {
+  height: 100%;
+  width: auto;
+  opacity: 0.6;
+  transform: translateX(50%) translateY(30%);
+  transition: transform 0.6s ease-out;
+  will-change: transform;
+}
+
+/* Versão mobile — mandala maior e mais translúcida */
+@media (max-width: 900px) {
+  .material-mandala, .tipos-mandala .tipo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .material-mandala img,
+  .tipos-mandala .imagem img {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .envio-mandala {
+    padding: 40px 20px;
+  }
+
+  .intro-mandala h2 {
+    font-size: 2rem;
+  }
+
+  .imagem-mandala img {
+    width: 420%;
+    height: auto;
+    opacity: 0.35;
+    transform: translateX(50%);
+  }
+}
+
+/* ====== MODO ESCURO ====== */
+body.dark .sobre-mandalas-nova {
+  background: #0e0e0e;
+  color: #f1f1f1;
+}
+
+body.dark .sobre-mandalas-nova p {
+  color: #ddd;
+}
+
+body.dark .material-mandala img,
+body.dark .tipos-mandala .imagem img {
+  box-shadow: 0 10px 30px rgba(255,255,255,0.08);
+}
+
+body.dark .envio-mandala {
+  background: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(255,255,255,0.05);
+}
+
+body.dark .intro-mandala h2 {
+  color: #f92f8a;
+}
+
+
+
+/* ===== BOTÃO FLUTUANTE DO WHATSAPP ===== */
+.whatsapp-popup {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-popup img {
+  width: 36px;
+  height: 36px;
+}
+
+.whatsapp-popup:hover {
+  transform: scale(1.08);
+}
+
+/* Oculto (quando o menu está aberto) */
+.whatsapp-popup.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+/* ===== MANDALAS - DESIGN LIMPO E PROFISSIONAL ===== */
+.sobre-mandalas-nova {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 100px 20px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.sobre-mandalas-nova h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.sobre-mandalas-nova p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 700px;
+}
+
+/* Container */
+.container-mandala {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* Blocos */
+.material-mandala.clean,
+.tipos-mandala.clean .tipo {
+  background: var(--card-bg);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-mandala.clean:hover,
+.tipos-mandala.clean .tipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Ícones / Emojis destacados */
+.tipos-mandala h3::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Layout dos tipos */
+.tipos-mandala.clean {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sobre-mandalas-nova {
+    padding: 60px 15px;
+  }
+
+  .sobre-mandalas-nova h3 {
+    font-size: 1.5rem;
+  }
+
+  .material-mandala.clean,
+  .tipos-mandala.clean .tipo {
+    padding: 25px;
+  }
+}
+
+/* Modo escuro */
+body.dark .material-mandala.clean,
+body.dark .tipos-mandala.clean .tipo {
+  background: #1b1b1b;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+/* ===== TRANSPARÊNCIA SUAVE NOS CARDS DAS MANDALAS ===== */
+.material-mandala.clean,
+.tipos-mandala.clean .tipo,
+.envio-mandala {
+  background: rgba(235, 235, 235, 0.75); /* Fundo branco translúcido */
+  backdrop-filter: blur(8px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Modo escuro */
+body.dark .material-mandala.clean,
+body.dark .tipos-mandala.clean .tipo,
+body.dark .envio-mandala {
+  background: rgba(20, 20, 20, 0.65); /* fundo escuro translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
+  </style>
+</head> -->
+
+
+<head>
+  <!-- Google tag (gtag.js) — (mantido) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YNT10S4B3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4YNT10S4B3');
+  </script>
+
+  <!-- Básico (mantido) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔥 SEO base (NOVO) -->
+  <meta http-equiv="Content-Language" content="pt-BR">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Mandaura - Arte e Energia">
+  <link rel="canonical" href="https://www.mandaura.com.br/"> <!-- ⚠️ troque para o teu domínio real -->
+  <title>Mandaura</title>
+
+  <!-- Descrição e palavras-chave (NOVO – personalize o texto) -->
+  <meta name="description" content="Mandalas artesanais para decoração e harmonização de ambientes. Arte, energia e natureza para o seu lar e jardim.">
+  <meta name="keywords" content="mandala, decoração de interiores, artesanato, arte energética, jardim, feng shui, reiki, energia positiva, esculturas decorativas">
+
+  <!-- Ícones / favicon (mantido + NOVOS tamanhos) -->
+  <link rel="shortcut icon" href="/ico/favicon (1).ico" type="image/x-icon"> <!-- mantido -->
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#f92f8a">
+
+  <!-- Open Graph (Facebook/WhatsApp/Instagram) (NOVO) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mandaura — Mandalas que harmonizam seu espaço">
+  <meta property="og:description" content="Transforme seu lar com mandalas artesanais que elevam a energia e a beleza.">
+  <meta property="og:url" content="https://www.mandaura.com.br/"><!-- troque -->
+  <meta property="og:image" content="https://www.mandaura.com.br/ico/logoMandaura.jpeg"><!-- troque para uma imagem 1200x630 -->
+
+  <!-- Twitter Cards (NOVO) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mandaura — Arte e Energia">
+  <meta name="twitter:description" content="Arte que decora e harmoniza. Mandalas artesanais para casa e jardim.">
+  <meta name="twitter:image" content="https://www.mandaura.com.br/ico/logoMandaura.jpeg"><!-- troque -->
+
+  <!-- Performance fontes (mantido) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS (mantido) -->
+  <link rel="stylesheet" href="intro.css">
+
+  <!-- Manifest PWA (opcional, ajuda UX em mobile) (NOVO) -->
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+  <!-- JSON-LD Organization (NOVO – substitua URLs/mesas sociais se quiser) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mandaura",
+    "url": "https://www.mandaura.com.br/",
+    "logo": "https://www.mandaura.com.br/ico/logoMandaura.jpeg"
+  }
+  </script>
   <style>
     :root {
       --primary: #f92f8a;
@@ -1128,6 +2306,11 @@ body.dark .envio-mandala {
 
   </style>
 </head>
+
+
+
+
+
 
 <body>
 
