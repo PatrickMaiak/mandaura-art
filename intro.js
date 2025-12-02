@@ -31,6 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Libera scroll
       body.classList.remove("animacaoAtivaAnimacao");
-    }, 5000); // duração da logo expandida
+    }, 0); // duração da logo expandida
   }, 5200); // aumenta o delay da bem-vindo (antes era 6500)
 });
