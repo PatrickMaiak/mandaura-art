@@ -112,7 +112,7 @@ window.addEventListener("scroll", () => {
 
 
 
-
+// ORDENAÇÃO DE BUSCA POR LINK DO MENU
 
 
 
@@ -469,13 +469,25 @@ lazyMedia.forEach(el => mediaObserver.observe(el));
     });
 
     // ---- Info ----
-    const info = document.createElement("div");
-    info.classList.add("info");
-    info.innerHTML = `
-        <h2>${produto.titulo}</h2>
-        <p><strong>Tamanho:</strong> ${produto.tamanho}</p>
-        <p>${produto.descricao}</p>
-      `;
+  const info = document.createElement("div");
+  info.classList.add("info");
+
+  // Monta o HTML base
+  let html = `
+      <h2>${produto.titulo}</h2>
+      <p><strong>Tamanho:</strong> ${produto.tamanho}</p>
+      <p>${produto.descricao}</p>
+  `;
+
+  // Adiciona o preço SOMENTE se existir
+  if (produto.preco && produto.preco !== "") {
+    html += `<p><strong>R$</strong> ${produto.preco}</p>`;
+  }
+
+info.innerHTML = html;
+
+
+      // fazer o R$ aparecer só quando tiver um valor no preço 
 
     // ---- Checkbox ----
     // ---- Checkbox ----
