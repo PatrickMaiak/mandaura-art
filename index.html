@@ -85,6 +85,11 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
+     html.animacaoAtivaAnimacao,body.animacaoAtivaAnimacao {
+      overflow: hidden !important; /* trava scroll vertical e horizontal */
+      height: 100vh;               /* garante altura travada na tela */
+    }
+
 
     body {
       overflow-x: hidden;

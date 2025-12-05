@@ -2,22 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carrega o JSON com os produtos
   // fetch("produtos/produtos.json")
   fetch("https://patrickmaiak.github.io/mandaura-data/produtos.json")
-
-  .then(res => res.json())
-  .then(produtos => {
-    
-
-
+    .then(res => res.json())
+    .then(produtos => {
       const animacaoJaRodou = sessionStorage.getItem("animacaoRodou");
       const animacaoContainer = document.querySelector(".animacaoContainerAnimacao");
 
+      // 1) Já inicia o site assim que o JSON chega
+      iniciarSite(produtos);
+
+      // 2) Só cuida da animação (mostrar / esconder)
       if (!animacaoJaRodou) {
-        // Mostra a animação
+        // garante que o overlay da animação está visível
         if (animacaoContainer) animacaoContainer.style.display = "block";
 
-        // Depois de 13s, inicia o site e oculta a animação
+        // depois de ~6s só some com a animação (o site já está pronto atrás)
         setTimeout(() => {
-          iniciarSite(produtos); // inicializa o site com os produtos
           if (animacaoContainer) {
             animacaoContainer.style.transition = "opacity 0.5s";
             animacaoContainer.style.opacity = "0";
@@ -28,14 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 6100);
 
       } else {
-        // Se já rodou, inicia o site direto e garante que a animação está oculta
+        // segunda visita: some com a animação direto
         if (animacaoContainer) animacaoContainer.style.display = "none";
-        iniciarSite(produtos); // inicializa o site direto
       }
-
     })
     .catch(error => console.error("Erro ao carregar produtos:", error));
 });
+
 
 
 
