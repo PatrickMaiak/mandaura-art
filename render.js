@@ -481,7 +481,7 @@ lazyMedia.forEach(el => mediaObserver.observe(el));
 
   // Adiciona o preço SOMENTE se existir
   if (produto.preco && produto.preco !== "") {
-    html += `<p><strong>R$</strong> ${produto.preco}</p>`;
+    html += `<p style="color: #1db954;"><strong>R$ ${produto.preco}</strong> </p>`;
   }
 
 info.innerHTML = html;
