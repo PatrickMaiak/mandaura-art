@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           sessionStorage.setItem("animacaoRodou", "true");
-        }, 14100);
+        }, 6100);
 
       } else {
         // Se já rodou, inicia o site direto e garante que a animação está oculta
@@ -480,7 +480,7 @@ lazyMedia.forEach(el => mediaObserver.observe(el));
   `;
 
   // Adiciona o preço SOMENTE se existir
-  if (produto.preco && produto.preco !== "") {
+  if (produto.preco && produto.preco !== "" && Number(produto.preco) !== 0) {
     html += `<p style="color: #1db954;"><strong>R$ ${produto.preco}</strong> </p>`;
   }
 
