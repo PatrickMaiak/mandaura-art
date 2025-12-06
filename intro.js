@@ -1,36 +1,49 @@
+// intro.js
 document.addEventListener("DOMContentLoaded", () => {
   const animacaoContainer = document.querySelector(".animacaoContainerAnimacao");
-  const intro = document.querySelector(".introAnimacao");
-  const bemvindo = document.querySelector(".bemvindoAnimacao");
-  const logoExpand = document.querySelector(".logoExpandAnimacao");
-  const body = document.body;
+  const intro       = document.querySelector(".introAnimacao");
+  const bemvindo    = document.querySelector(".bemvindoAnimacao");
+  const logoExpand  = document.querySelector(".logoExpandAnimacao");
+  const body        = document.body;
 
-  // Bloqueia scroll
+  const animacaoJaRodou = sessionStorage.getItem("animacaoRodou");
+
+  // 👉 Se a animação já rodou nesta aba, não roda de novo
+  if (animacaoJaRodou) {
+    if (animacaoContainer) animacaoContainer.style.display = "none";
+    body.classList.remove("animacaoAtivaAnimacao");
+    return; // sai daqui, não programa nenhum setTimeout
+  }
+
+  // 👇 Primeira vez na aba → roda a animação normalmente
   body.classList.add("animacaoAtivaAnimacao");
 
-  // 1️⃣ Letras do logo aparecem
+  // 1) Letras do logo aparecem
   setTimeout(() => {
+    if (!intro) return;
     intro.classList.add("fadeOutAnimacao");
 
-    // 2️⃣ Mostra a mensagem de bem-vindo
+    // 2) Mostra a mensagem de bem-vindo
     setTimeout(() => {
+      if (!intro || !bemvindo) return;
       intro.style.display = "none";
       bemvindo.style.display = "block";
     }, 900); // fade-out do intro
   }, 1100); // tempo para as letras aparecerem
 
-  // 3️⃣ Mantém a mensagem de bem-vindo mais tempo antes da logo expandir
+  // 3) Mostra bem-vindo por um tempo e depois a logo expandida
   setTimeout(() => {
+    if (!bemvindo || !logoExpand) return;
+
     bemvindo.style.display = "none";
     logoExpand.style.display = "block";
 
-    // 4️⃣ Quando a logo termina de expandir, remove animação e mostra o site
+    // 4) Final da animação → esconde tudo, libera o site e marca que já rodou
     setTimeout(() => {
       logoExpand.style.display = "none";
-      animacaoContainer.style.display = "none";
-
-      // Libera scroll
+      if (animacaoContainer) animacaoContainer.style.display = "none";
       body.classList.remove("animacaoAtivaAnimacao");
-    }, 0); // duração da logo expandida
-  }, 5200); // aumenta o delay da bem-vindo (antes era 6500)
+      sessionStorage.setItem("animacaoRodou", "true"); // ✅ marca que já rodou
+    }, 0);
+  }, 5200);
 });

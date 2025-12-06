@@ -1,38 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Carrega o JSON com os produtos
-  // fetch("produtos/produtos.json")
   fetch("https://patrickmaiak.github.io/mandaura-data/produtos.json")
     .then(res => res.json())
     .then(produtos => {
-      const animacaoJaRodou = sessionStorage.getItem("animacaoRodou");
-      const animacaoContainer = document.querySelector(".animacaoContainerAnimacao");
-
-      // 1) Já inicia o site assim que o JSON chega
+      // 👉 deixa o JS dos produtos cuidar só do site
       iniciarSite(produtos);
-
-      // 2) Só cuida da animação (mostrar / esconder)
-      if (!animacaoJaRodou) {
-        // garante que o overlay da animação está visível
-        if (animacaoContainer) animacaoContainer.style.display = "block";
-
-        // depois de ~6s só some com a animação (o site já está pronto atrás)
-        setTimeout(() => {
-          if (animacaoContainer) {
-            animacaoContainer.style.transition = "opacity 0.5s";
-            animacaoContainer.style.opacity = "0";
-            setTimeout(() => animacaoContainer.style.display = "none", 500);
-          }
-
-          sessionStorage.setItem("animacaoRodou", "true");
-        }, 6100);
-
-      } else {
-        // segunda visita: some com a animação direto
-        if (animacaoContainer) animacaoContainer.style.display = "none";
-      }
     })
     .catch(error => console.error("Erro ao carregar produtos:", error));
 });
+
 
 
 
@@ -479,7 +454,7 @@ lazyMedia.forEach(el => mediaObserver.observe(el));
 
   // Adiciona o preço SOMENTE se existir
   if (produto.preco && produto.preco !== "" && Number(produto.preco) !== 0) {
-    html += `<p style="color: #1db954;"><strong>R$ ${produto.preco}</strong> </p>`;
+    html += `<p><strong class="preco">R$ ${produto.preco}</strong> </p>`;
   }
 
 info.innerHTML = html;
