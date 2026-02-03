@@ -244,16 +244,46 @@ carousel.classList.add("carousel");
 const mostrarVideoPrimeiro = !!produto.video && i === 0;
 
 // Função para adicionar imagens
+// const adicionarImagens = () => {
+//   produto.imagens.forEach((src, index) => {
+//     const img = document.createElement("img");
+//     img.classList.add("carousel-item");
+
+//     if (index === 0 && !mostrarVideoPrimeiro) {
+//       // ✅ PRIMEIRA IMAGEM: carrega direto, nada de lazy
+//       img.src = src;
+//       img.classList.add("active");
+//     } else {
+//       // ✅ DEMAIS IMAGENS: lazy
+//       img.src = "ico/loading.png";   // placeholder
+//       img.dataset.src = src;
+//       img.classList.add("lazy-media");
+//     }
+
+//     carousel.appendChild(img);
+//   });
+// };
 const adicionarImagens = () => {
   produto.imagens.forEach((src, index) => {
     const img = document.createElement("img");
-    img.src = "ico/loading.png"; // placeholder inicial
-    img.dataset.src = src;
-    img.classList.add("carousel-item", "lazy-media");
-    if (!mostrarVideoPrimeiro && index === 0) img.classList.add("active");
+    img.classList.add("carousel-item");
+
+    if (index === 0 && !mostrarVideoPrimeiro) {
+      // PRIMEIRA IMAGEM: carrega direto SEM lazy
+      img.src = src;
+      img.classList.add("active");
+    } else {
+      // OUTRAS IMAGENS: lazy load simples e 100% sem bug
+      img.src = "ico/loading.png";  // placeholder único
+      img.dataset.src = src;
+      img.classList.add("lazy-media");
+    }
+
     carousel.appendChild(img);
   });
 };
+
+
 
 // Função para adicionar vídeo
 const adicionarVideo = () => {
@@ -937,10 +967,10 @@ window.addEventListener("popstate", () => {
 
   // Define o texto com base na quantidade de itens
   const textoMandala = carrinho.length > 1
-    ? "as mandalas"
-    : "a mandala";
+    ? "das"
+    : "da";
 
-  const msg = `Olá! Gostaria de mais informações sobre ${textoMandala}:\n${produtosSelecionados}`;
+  const msg = `Olá! Gostaria de fazer o pedido ${textoMandala}:\n${produtosSelecionados}`;
 
   window.open(
     `https://wa.me/5547984694079?text=${encodeURIComponent(msg)}`,
