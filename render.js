@@ -967,8 +967,8 @@ window.addEventListener("popstate", () => {
 
   // Define o texto com base na quantidade de itens
   const textoMandala = carrinho.length > 1
-    ? "das"
-    : "da";
+    ? "das mandalas"
+    : "da mandala";
 
   const msg = `Olá! Gostaria de fazer o pedido ${textoMandala}:\n${produtosSelecionados}`;
 
